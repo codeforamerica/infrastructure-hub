@@ -1,0 +1,391 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+/* Colors */
+html {
+  -webkit-var-accent-color: #ff3800;
+  -webkit-var-background-color: #e6e6e6;
+}
+
+/* Font Styling */
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  font-size: 12px;
+  line-height: 20px;
+  color: #919191
+}
+
+h1 {
+  display: inline-block;
+  color: white;
+  font-size: 30px;
+  line-height: 44px;
+  font-weight: 700;
+}
+
+h2 {
+  display: inline-block;
+  margin: 254px 0px 10px;
+  padding: 9px 13px;
+  background-color: rgba(0,0,0,.5);
+  color: white;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+}
+
+h3 {
+  margin-right: 0px;
+  margin-left: 0px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+h4 {
+  margin-right: 0px;
+  margin-bottom: 6px;
+  margin-left: 0px;
+  border-width: 1px;
+  border-color: black;
+  box-shadow: none;
+  font-size: 18px;
+  font-weight: 400;
+  text-shadow: none;
+}
+
+h5 {
+  margin-right: 0px;
+  margin-left: 0px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+h6 {
+  margin: 10px 0px;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+a {
+  color: #ff3800;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff6633;
+}
+
+/* Start Page */
+
+.half {
+  display: inline-block;
+  width:47%;
+  min-height: 800px;
+}
+
+#half-left {
+  float: left;
+  background: url(images/atlanta.jpg);
+  padding: 5% 0 0 6%;
+}
+
+#half-right {
+  float: right;
+  background-color: #fff;
+}
+
+#jumpToMap {
+  position: relative;
+  margin-top: 40%;
+  margin-bottom: 20%;
+  margin-left: 22.5%;
+  float: right;
+  height: 50px;
+}
+
+/* Menus */
+
+.menu {
+ position: fixed;
+ background-color: #e6e6e6;
+ border-radius: 0px;
+ padding: 20px;
+ z-index: 1000;
+}
+
+#title-menu {
+  float: left;
+  margin-left: 5%;
+  padding-top: 3%;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  width:10%;
+  background-color: #000;
+}
+
+#legend-menu {
+  float: right;
+  bottom: 0px;
+  right: 0px;
+  margin-right: 5%;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  width: 15%;
+}
+
+#about-menu {
+  float: right;
+  top: 0px;
+  right: 0px;
+  margin-right: 5%;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+  width: 15%;
+}
+
+.hide-show {
+  width: 80%;
+  height: 1em;
+  margin-bottom: 10px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+#about {
+  display: none;
+}
+
+#hide-about, #show-legend {
+  display: none;
+}
+
+.hide, .show {
+  display: inline;
+  padding: 2px;
+  color: #ff3800;
+  z-index: 1001;
+  text-decoration: none;
+  text-align: center;
+}
+
+.footer {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  min-height: 10px;
+  background-color: black;
+  padding: 1% 0 0.5% 1.5%;
+}
+
+.navbar li {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+/* Map styling */
+
+#map { 
+  position:absolute; 
+  top:0; 
+  bottom:0; 
+  width:100%; 
+  z-index:-1000;
+}
+
+.info {
+      position: fixed;
+      float: left;
+      bottom: 0;
+      left: 1%;
+      padding: 6px 8px;
+      font: 14px/16px Arial, Helvetica, sans-serif;
+      background: white;
+      background: rgba(255,255,255,0.8);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+
+.info h4 {
+      margin: 0 0 5px;
+      color: #777;
+    }
+
+.legend {
+      text-align: left;
+      line-height: 18px;
+      color: #555;
+    }
+
+.legend i {
+      width: 18px;
+      height: 18px;
+      float: left;
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+
+
+/* Buttons */
+
+.button {
+  display: inline-block;
+  padding: 4px 15px;
+  border-radius: 0px;
+  background-color: rgba(255,56,0,0.5);
+  background-image: none;
+  -webkit-transition: all 200ms ease;
+  -o-transition: all 200ms ease;
+  transition: all 200ms ease;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: #000;
+}
+
+.big-button {
+  line-height: 50px;
+  font-size: 30px;
+  padding: 40px;
+}
+
+#map-button {
+  width: 200px;
+  height: 80px;
+  font-size: large;
+  padding: 10px;
+  line-height: 80px;
+}
+
+.subtitle {
+  margin-top: 20px;
+  margin-bottom: 18px;
+  -webkit-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  font-family:'Open Sans', sans-serif;
+  color: #919191;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.map {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 0;
+  display: block;
+  overflow-x: visible;
+  overflow-y: visible;
+  height: 100%;
+  margin: auto;
+  float: none;
+}
+
+
+
+
+@media (max-width: 991px) {
+  .button {
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+  }
+  .subtitle {
+    -webkit-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+    transform: none;
+  }
+}
+@media (max-width: 767px) {
+  h1 {
+    margin-top: 173px;
+  }
+  h2 {
+    margin-top: 107px;
+  }
+  .button {
+    margin-bottom: 33px;
+    padding: 29px 30px;
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .company-title {
+    margin-bottom: 33px;
+  }
+}
+@media (max-width: 479px) {
+  .button {
+    -webkit-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+  }
+}
+
