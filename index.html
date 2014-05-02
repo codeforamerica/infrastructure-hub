@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0054)http://getbootstrap.com/examples/sticky-footer-navbar/ -->
+<!-- saved from url=(0043)http://getbootstrap.com/examples/jumbotron/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +7,23 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+    
+    <!-- Mapbox CSS & js -->
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' /> 
 
-    <title>Sticky Footer Navbar Template for Bootstrap</title>
+    <!-- Leaflet CSS & js -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script> 
+
+
+    <title>Atlanta's State of the Infrastructure Hub</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="http://getbootstrap.com/examples/sticky-footer-navbar/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -24,65 +33,157 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-  <style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head>
+  <style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style></head>
 
   <body>
-
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Project name</a>
-        </div>
-        <div class="collapse navbar-collapse">
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Home</a></li>
-            <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#about">About</a></li>
-            <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#contact">Contact</a></li>
-            <li class="dropdown">
-              <a href="http://getbootstrap.com/examples/sticky-footer-navbar/#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Action</a></li>
-                <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Another action</a></li>
-                <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Something else here</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">Separated link</a></li>
-                <li><a href="http://getbootstrap.com/examples/sticky-footer-navbar/#">One more separated link</a></li>
-              </ul>
-            </li>
+            <li class="active"><a href="index.html">ATL Infrastructure Hub</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="http://getbootstrap.com/examples/navbar-fixed-top/#about">Data</a></li>
+            <li><a href="http://getbootstrap.com/examples/navbar-fixed-top/#contact">Report</a></li>
+            <li><a href="http://getbootstrap.com/examples/navbar-fixed-top/#contact">FAQ</a></li>
           </ul>
-        </div><!--/.nav-collapse -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><img class="nav-badge" src="assets/map.svg"></a></li>
+            <li><a href="#"><img class="nav-badge" src="assets/vote.svg"></a></li>
+            <li><a href="#"><img class="nav-badge" src="assets/question.svg"></a></li>
+          </ul>
+          <!-- <form class="navbar-form navbar-right" role="form">
+            <div class="form-group">
+              <input type="text" placeholder="Email" class="form-control" autocomplete="off" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; cursor: pointer; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
+            </div>
+            <div class="form-group">
+              <input type="password" placeholder="Password" class="form-control" autocomplete="off" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
+            </div>
+            <button type="submit" class="btn btn-success">Sign in</button>
+          </form> -->
+        </div><!--/.nav-collapse -->          
       </div>
     </div>
 
-    <!-- Begin page content -->
-    <div class="container">
-      <div class="page-header">
-        <h1>Sticky footer with fixed navbar</h1>
-      </div>
-      <p class="lead">Pin a fixed-height footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code>padding-top: 60px;</code> on the <code>body &gt; .container</code>.</p>
-      <p>Back to <a href="http://getbootstrap.com/examples/sticky-footer">the default sticky footer</a> minus the navbar.</p>
-    </div>
 
-    <div id="footer">
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <button type="button" class="close" data-dismiss="alert">×</button>
       <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
+        <h1>Welcome!</h1>
+        <p>The City of Atlanta is planning a $250 million infrastructure bond measure, and is currently seeking input from citizens. You can use this site to learn more about the proposed projects, vote on which projects are important to you, and provide feedback on what kinds of improvements you would like to see to Atlanta's pedestrian and transportation infrastructure.</p>
+        </div>
+    </div>
+
+    <!-- Site tools -->
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="brick" id="learn">
+          <a href="#">
+            <img class="brick-badge" src="assets/map.svg">
+            <h1>Learn</h1>
+            <p>Learn more about the proposed projects on our interactive map. </p>
+          </a>
+        </div>
+        <div class="brick" id="vote">
+          <a href="#">
+            <img class="brick-badge" src="assets/vote.svg">
+            <h1>Vote</h1>
+            <p>Vote for the infrastructure projects that matter to you. </p>
+          </a>
+       </div>
+        <div class="brick" id="involve">
+          <a href="#">
+            <img class="brick-badge" src="assets/question.svg">
+            <h1>Get involved</h1>
+            <p>Find out more about the project timeline and locate a public information session near you.</p>
+          </a>
+        </div>
       </div>
     </div>
+
+
+
+    <!-- Footer -->
+    <div id="footer" class="textcenter">
+      <hr>
+      <p class="muted">Created by <a href="http://www.codeforamerica.org"><img class="footerLogo" src="assets/cfa_logo_black.png"></a> in partnership with the <a href="http://www.atlantaga.gov">City of Atlanta</a><a href="http://www.atlantaga.gov"><img class="footerLogo" src="assets/atl_seal.png"></a></p>
+    </div>
+    
+
+    <!-- Mapbox & Leaflet scripts -->
+
+    <!-- TileMill -->
+    <script>
+    // var map = L.map('map').setView([33.75, -84.39], 15);
+    // var ui = document.getElementById('map-ui');
+
+    // addLayer(L.mapbox.tileLayer('codeforamerica.i4ha22b7'), 'Base Map', 1);
+    // addLayer(L.mapbox.tileLayer('reveillette.i4gpmfb7'), 'Demographics', 2);
+    // addLayer(L.mapbox.tileLayer('codeforamerica.i4ha22b7.Resurfacing'), 'Street Resurfacing Projects', 3);
+    // addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Bridge Projects', 4);
+    // addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Traffic Signal Projects', 5);
+    // addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Reversible Lane System Projects', 6);
+    // addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'School Zone Flasher Projects', 7);
+    // addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Unpaved Street Projects', 8);
+
+
+
+    // function addLayer(layer, name, zIndex) {
+    //     layer
+    //         .setZIndex(zIndex)
+    //         .addTo(map);
+
+    //     // Create a simple layer switcher that toggles layers on and off.
+    //     var item = document.createElement('li');
+    //     var link = document.createElement('a');
+
+    //     link.href = '#';
+    //     link.className = 'active';
+    //     link.innerHTML = name;
+
+    //     link.onclick = function(e) {
+    //         e.preventDefault();
+    //         e.stopPropagation();
+
+    //         if (map.hasLayer(layer)) {
+    //             map.removeLayer(layer);
+    //             this.className = '';
+    //         } else {
+    //             map.addLayer(layer);
+    //             this.className = 'active';
+    //         }
+    //     };
+
+    //     item.appendChild(link);
+    //     ui.appendChild(item);
+    // }
+    </script>
+
+    <!-- Leaflet -->
+      <!-- Data sources - Infrastructure layers -->
+      <script type="text/javascript" src="./data/unpaved.js"></script>
+
+      <!-- Data sources - Base area layers -->
+
+      <!-- Data sources - Demographics layers -->
+
+
+    <script>
+      var map = L.map('map').setView([33.75, -84.39], 15);
+
+      L.mapbox.tileLayer('codeforamerica.i4ha22b7')
+      
+
+    </script>
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Sticky Footer Navbar Template for Bootstrap_files/jquery.min.js"></script>
-    <script src="./Sticky Footer Navbar Template for Bootstrap_files/bootstrap.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
   
 
-</body></html>
+<script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>
