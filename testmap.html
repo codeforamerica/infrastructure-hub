@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+        <!-- Mapbox CSS + js -->
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
+
+		<!-- MarkerCluster plugin -->
+		<link rel="stylesheet" href="css/MarkerCluster.css" />
+		<link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+		<script src="js/leaflet.markercluster-src.js"></script>
+
+    
+        <!-- Map styles -->
+		<style>
+			body { margin:0; padding:0; }
+  			#map { position:absolute; top:0; bottom:0; width:100%; }		
+  		</style>	
+    </head>
+    
+    <body>
+    	<div id="map"></div>
+    </body>
+
+    <!-- Mapbox and Leaflet scripts -->
+
+    <!-- Infrastructure layers -->
+    <script type="text/javascript" src="data/resurfacing.js"></script>
+    <script type="text/javascript" src="data/bridges.js"></script>
+    <script type="text/javascript" src="data/signals.js"></script>
+    <script type="text/javascript" src="data/reversible.js"></script>
+    <script type="text/javascript" src="data/school_flasher.js"></script>
+    <script type="text/javascript" src="data/unpaved.js"></script>
+
+    <!-- Base area layers -->
+    <script type="text/javascript" src="data/city_limits.js"></script>
+    <script type="text/javascript" src="data/quadrants.js"></script>
+    <script type="text/javascript" src="data/council_districts.js"></script>
+    <script type="text/javascript" src="data/npus.js"></script>
+    <script type="text/javascript" src="data/neighborhoods.js"></script>
+
+    <script>
+		var map = L.mapbox.map('map', 'codeforamerica.i4ha22b7')
+    		.setView([33.75, -84.39], 14);
+
+    	// Style functions
+    	function getColorByPriority(p) {
+		    return p == 'LOW' 	? 	'#f9db65' :
+		           p == 'MEDIUM' ? 	'#fa934f' :
+		           p == 'HIGH' 	? 	'#ff3535' :
+		           					'#ff3535';
+		}
+
+		function sizeByZoom(zoom) {
+			return 	zoom <  12 					?	0 :
+					zoom >= 12 && zoom <= 13	?	2 :
+					zoom >= 14 && zoom <= 16	?	5 :
+					zoom >= 17 && zoom <= 18	?	7 :
+													0 ;
+
+													
+		};
+
+    	function lineStyle(feature) {
+    		return {
+    			lineCap: "butt",
+				weight: sizeByZoom(map.getZoom()),
+				opacity: 1,
+				color: getColorByPriority(feature.properties.PRIORITY),
+    		}
+    	};
+
+    	var geojsonMarkerOptions = {
+		    radius: sizeByZoom(map.getZoom()),
+		    color: "#fff",
+		    weight: 1,
+		    opacity: 1,
+		    fillOpacity: 1
+		};
+
+		function latlng(coordinates) {
+			return L.coordsToLatLng(coordinates, true);
+		};
+
+		function areaStyle(feature) {
+			return {
+    			lineCap: "butt",
+				weight: 0.5 * sizeByZoom(map.getZoom()),
+				opacity: 1,
+				color: "#fff",
+				dashArray: "" + sizeByZoom(map.getZoom()) + "," + sizeByZoom(map.getZoom()) + "",
+				fillColor: "hsl(185,92%," + (70 - Math.floor(Math.random() * 40)) + "%)",
+				fillOpacity: 0.5
+			}
+		};
+
+
+
+		// function areaStyle(feature) {
+		// 	for (i = 0; i < feature.length; i++) {
+		// 		var random = Math.floor(Math.random() * 255);
+		// 		return {
+		// 			weight: sizeByZoom(map.getZoom()),
+		// 			opacity: 1,
+		// 			color: "#fff",
+		// 			fillColor: "rgb(255,255," + random + ")",
+	 //    			fillOpacity: 0.5
+	 //    		}
+	 //    	}
+		// };
+
+    	// Base geometry
+    	// L.geoJson(city_limits, 	{style: areaStyle}).addTo(map);
+    	// L.geoJson(quadrants, 	{style: areaStyle}).addTo(map);
+    	// L.geoJson(council, 		{style: areaStyle}).addTo(map);
+    	// L.geoJson(npu, 			{style: areaStyle}).addTo(map);
+    	L.geoJson(neighborhoods, {style: areaStyle}).addTo(map);
+
+
+    	// Infrastructure line features
+    	var resurfacing = L.geoJson(resurfacing, 	{style: lineStyle}).addTo(map);
+    	var reversible = L.geoJson(reversible, 		{style: lineStyle}).addTo(map);
+    	var unpaved = L.geoJson(unpaved, 			{style: lineStyle}).addTo(map);
+
+
+    	// Infrastructure point features
+    	var markers = new L.MarkerClusterGroup();
+	
+    	var bridges = L.geoJson(bridges, 		{
+    		pointToLayer: function (feature, latlng) {
+    			geojsonMarkerOptions['fillColor'] = getColorByPriority(feature.properties.PRIORITY);
+    			return L.circleMarker(latlng, geojsonMarkerOptions);
+    		}
+    	});
+    		
+    	var signals = L.geoJson(signals, 		{
+     		pointToLayer: function (feature, latlng) {
+    			geojsonMarkerOptions['fillColor'] = getColorByPriority(feature.properties.PRIORITY);
+    			return L.circleMarker(latlng, geojsonMarkerOptions);
+    		}
+    	});
+
+    	var flashers = L.geoJson(flashers, 	{
+    		pointToLayer: function (feature, latlng) {
+    			geojsonMarkerOptions['fillColor'] = getColorByPriority(feature.properties.PRIORITY);
+    			return L.circleMarker(latlng, geojsonMarkerOptions);
+    		}
+    	});
+
+    	markers.addLayer(bridges);
+    	markers.addLayer(signals);
+    	markers.addLayer(flashers);
+    	map.addLayer(markers);
+
+    </script>
+
+    <!-- D3 Scripts -->
+    <script>
+  //       var w = 300,                        	//width
+  //   	var h = 300,                            //height
+  //   	var r = 100,                            //radius
+  //   	var color = d3.scale.category20c();     //built-in range of colors
+
+    
+		// var dataset;                            //Declare a global variable
+
+		// d3.json(“data/unpaved.js”, function(data) {
+  //    		dataset = data;                     //Hand JSON data off to global variable
+		// });
+
+		// data = [{"label":"one", "value":20}, 
+		//             {"label":"two", "value":50}, 
+		//             {"label":"three", "value":30}];
+    
+	 //    var vis = d3.select("body")
+	 //        .append("svg:svg")              	//create the SVG element inside the <body>
+	 //        .data([data])                   	//associate our data with the document
+	 //        .attr("width", w)           		//set the width and height of our visualization (these will be attributes of the <svg> tag
+	 //        .attr("height", h)
+	 //        .append("svg:g")                	//make a group to hold our pie chart
+	 //        .attr("transform", "translate(" + r + "," + r + ")")    //move the center of the pie chart from 0, 0 to radius, radius
+
+	 //    var arc = d3.svg.arc()              	//this will create <path> elements for us using arc data
+	 //        .outerRadius(r);
+
+	 //    var pie = d3.layout.pie()           	//this will create arc data for us given a list of values
+	 //        .value(function(d) { return d.value; });    //we must tell it out to access the value of each element in our data array
+
+	 //    var arcs = vis.selectAll("g.slice")     //this selects all <g> elements with class slice (there aren't any yet)
+	 //        .data(pie)                          //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties) 
+	 //        .enter()                            //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
+	 //            .append("svg:g")                //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
+	 //                .attr("class", "slice");    //allow us to style things in the slices (like text)
+
+	 //        arcs.append("svg:path")
+	 //                .attr("fill", function(d, i) { return color(i); } ) //set the color for each slice to be chosen from the color function defined above
+	 //                .attr("d", arc);                                    //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+
+	 //        arcs.append("svg:text")                                     //add a label to each slice
+	 //                .attr("transform", function(d) {                    //set the label's origin to the center of the arc
+	 //                //we have to make sure to set these before calling arc.centroid
+	 //                d.innerRadius = 0;
+	 //                d.outerRadius = r;
+	 //                return "translate(" + arc.centroid(d) + ")";        //this gives us a pair of coordinates like [50, 50]
+	 //            })
+	 //            .attr("text-anchor", "middle")                          //center the text on it's origin
+	 //            .text(function(d, i) { return data[i].label; });        //get the label from our original data array
+  //   </script>
+
+</html>
