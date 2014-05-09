@@ -1,208 +1,523 @@
 <!DOCTYPE html>
-<!-- saved from url=(0043)http://getbootstrap.com/examples/jumbotron/ -->
-<html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
-    <title>Atlanta's State of the Infrastructure Hub</title>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/styles.css" rel="stylesheet">
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+ 		<!-- JQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-    <!-- Custom styles for this template -->
-    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
+		<!-- D3 -->
+		<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>    	
 
-    <!-- Mapbox CSS & js -->
-    <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
-    <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' /> 
+		<!-- Mapbox CSS + js -->
+        <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
+		<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' />
 
-    <!-- Leaflet CSS & js -->
-    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script> 
+		<!-- MarkerCluster plugin -->
+		<link rel="stylesheet" href="css/MarkerCluster.css" />
+		<link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+		<script src="js/leaflet.markercluster-src.js"></script>
 
-    <!-- Browser support checks -->
-    <script>
-      var xmlhttp;
-      
-      if (window.XMLHttpRequest)
-        {// code for IE7+, Firefox, Chrome, Opera, Safari
-          xmlhttp=new XMLHttpRequest();
-        }
-      else
-        {// code for IE6, IE5
-          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        }
-    </script>
+		<!-- Google Fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Quicksand:300,400,700|Raleway:400,100,200,300,500,600,700,800,900|Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+        <!-- Site Content -->
 
-  <style>
-    [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } 
-  </style>
-  </head>
+     	<button type="button" class="step-button prev"><</button>
+     	<button type="button" class="step-button next">></button>
 
-  <body>
-    <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">ATL Infrastructure Hub</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="http://getbootstrap.com/examples/navbar-fixed-top/#about">Data</a></li>
-            <li><a href="http://getbootstrap.com/examples/navbar-fixed-top/#contact">Report</a></li>
-            <li><a href="http://getbootstrap.com/examples/navbar-fixed-top/#contact">FAQ</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#"><img class="nav-badge" src="assets/map.svg"></a></li>
-            <li><a href="#"><img class="nav-badge" src="assets/vote.svg"></a></li>
-            <li><a href="#"><img class="nav-badge" src="assets/question.svg"></a></li>
-          </ul>
-          <!-- <form class="navbar-form navbar-right" role="form">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control" autocomplete="off" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; cursor: pointer; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control" autocomplete="off" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form> -->
-        </div><!--/.nav-collapse -->          
-      </div>
-    </div>
+        <div class="container">
+
+            <!-- Step 1: introduction -->
+			<div class="active" id="intro">
+				<h2>Step 1</h2>
+				<h1>Atlanta's 2014 Infrastructure Bond Measure</h1>
+				<p>The City of Atlanta is planning a $250 million infrastructure bond measure, and is currently seeking input from citizens. This site was designed with citizens in mind, and will be instrumental in helping the city decide which projects get funded. You can use this site to:</p>
+				<div class="row">
+			        <div class="brick" id="learn">
+			          <a href="testmap.html">
+			            <img class="brick-badge" src="assets/map.svg">
+			            <h3>1. Learn</h3>
+			            <p>Learn more about the infrastructure bond and the kinds of projects the city is proposing.</p>
+			          </a>
+			        </div>
+
+			        <div class="brick" id="vote">
+			          <a href="#">
+			            <img class="brick-badge" src="assets/vote.svg">
+			            <h3>2. Comment</h3>
+			            <p>Provide feedback on what kinds of improvements you would like to see to Atlanta's roads, sidewalks, bike paths, etc.</p>
+			          </a>
+			        </div>
+
+			        <div class="brick" id="learn">
+			          <a href="testmap.html">
+			            <img class="brick-badge" src="assets/map.svg">
+			            <h3>3. Browse</h3>
+			            <p>Explore the projects proposed for your neighborhood on our interactive map.</p>
+			          </a>
+			        </div>
+			    </div>
+				<div class="row">		   
+			        <div class="brick" id="vote">
+			          <a href="#">
+			            <img class="brick-badge" src="assets/vote.svg">
+			            <h3>4. Vote</h3>
+			            <p>Vote for the projects that are important to you.</p>
+			          </a>
+			        </div>
+
+			        <div class="brick" id="involve">
+			          <a href="#">
+			            <img class="brick-badge" src="assets/question.svg">
+			            <h3>5. Sign up</h3>
+			            <p>Sign up for notifications about your favorite projects and the bond measure in general.</p>
+			          </a>
+			        </div>
+
+			        <div class="brick" id="involve">
+			          <a href="#">
+			            <img class="brick-badge" src="assets/question.svg">
+			            <h3>6. Get more involved</h3>
+			            <p>Find out more about the project timeline and locate a public information session near you.</p>
+			          </a>
+			        </div>
+			      </div>
+			</div>
+
+            <!-- Step 2: About -->
+			<div class="step" id="what-is-infrastructure">
+				<h2>Step 2</h2>
+				<h1>What is this infrastructure bond about?</h1>
+				<p>This bond measure is aimed, first and foremost, at high-priority repairs to streets and bridges that have a significant impact on public safety. In addition, a certain amount of funding will also be set aside to develop streetscape and active transportation improvements such as sidewalks and bicycle paths. You can help decide where this money goes by providing your input on this site!</p>
+				<div class="row">
+					<div class="brick"><h3>Budget for public safety improvements:</h3><h1>$XX Million</h1></div>
+					<div class="brick"><h3>Budget for streetscape improvements:</h3><h1>$XX Million</h1></div>
+					<div class="brick"><img width="150px" height="150px" src="assets/piechart.svg"></div>
+				</div>	
+				<p>This bond limits its focus to infrastructure related to general fund government operations such as roads, streets, bridges and sidewalks. The City’s water/sewer infrastructure (including storm water management) and the infrastructure at Hartsfield-Jackson Atlanta International Airport, which receive funding through independent enterprise funds, are not included.</p>
+
+				<div class="row"></div>				
+				<h1>What is an infrastructure project?</h1>
+				<p>Wikipedia defines infrastructure as "the basic physical and organizational structures needed for the operation of a society or enterprise, or the services and facilities necessary for an economy to function. It can be generally defined as the set of interconnected structural elements that provide framework supporting an entire structure of development. It is an important term for judging a country or region's development."</p>
+				<p>In the case of this bond measure, an infrastructure project can mean anything from a bridge repair to road resurfacing to the addition of new sidewalks and bike paths. Take a look at the <a href="#">map</a> to learn more about the specific projects, and for even more information, you can view the City's <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0CDAQFjAB&url=http%3A%2F%2Fwww.atlantaga.gov%2Fmodules%2Fshowdocument.aspx%3Fdocumentid%3D13145&ei=0tJrU5KxBojQsASdjoGoBw&usg=AFQjCNE593aVtWagWBTgNxyG_pL7DRAuoA&bvm=bv.66111022,d.cWc">FY2010</a> and <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0CDYQFjAC&url=http%3A%2F%2Fwww.atlantaga.gov%2Fmodules%2Fshowdocument.aspx%3Fdocumentid%3D12370&ei=49JrU87oG-7NsQSojIGICQ&usg=AFQjCNE75xfAi6ljduloLLap6F1GlQBVeA&bvm=bv.66111022,d.cWc">FY2013</a> infrastructure reports.</p>  
+
+				<div class="row"></div>				
+				<h1>How does this impact me?</h1>
+				<p>(placeholder text) If you live, work, walk, bike or drive in Atlanta, this project will impact you. Most importantly, this is an opportunity for your voice to be heard! If you've ever thought to yourself that you'd like to see your streets get better, this is your chance to have a real impact on your community.</p>
+			</div>
+
+            <!-- Step 3: Map -->
+			<div class="step" id="browse-the-projects">
+				<h2>Step 3</h2>
+				<h1>Browse the infrastructure projects proposed by Atlanta's <a href="http://www.atlantaga.gov/index.aspx?page=193">Department of Public Works</a></h1>
+				<p>The projects on the map below have been designated by the City of Atlanta Department of Public Works as being the most critical infrastructure projects to address with this infrastructure bond. Using the layer control below, you can browse for projects in your neighborhood or council district, or look at different types of projects proposed citywide.</p>
+				<div class="row">
+					<div id="map"></div>
+					<a href="map.html"><p>View full screen<p></a>
+				</div>	
+			</div>
+
+            <!-- Step 4: Vote -->
+			<div class="step" id="vote-for-improvements">
+				<h2>Step 4</h2>
+				<h1>What kinds of improvements would you like to see in your neighborhood?</a></h1>
+				<p>First, read about the different types of improvements below. Then when you're ready, rank them in order of your preference and click submit.</p>
+				<div class="row">
+					<div class="brick" id="bike-paths">
+						<img class="brick-badge" src="assets/vote.svg">
+			        	<h3>Bicycle paths</h3>
+			        	<p>Vote for the projects that are important to you.</p>
+			        	<select>
+  							<option value="1">1</option>
+  							<option value="2">2</option>
+  							<option value="3">3</option>
+  							<option value="4">4</option>
+  							<option value="5">5</option>
+  							<option value="6">6</option>
+  							<option value="7">7</option>
+  							<option value="8">8</option>
+  							<option value="9">9</option>
+						</select>
+			        		<p>Comment:</p>
+			        		<textarea rows="4" cols="30"></textarea>
+					</div>
+
+					<div class="brick" id="bike-paths">
+						<img class="brick-badge" src="assets/vote.svg">
+			        	<h3>Sidewalks</h3>
+			        	<p>Vote for the projects that are important to you.</p>
+			        	<select>
+  							<option value="1">1</option>
+  							<option value="2">2</option>
+  							<option value="3">3</option>
+  							<option value="4">4</option>
+  							<option value="5">5</option>
+  							<option value="6">6</option>
+  							<option value="7">7</option>
+  							<option value="8">8</option>
+  							<option value="9">9</option>
+						</select>
+			        		<p>Comment:</p>
+			        		<textarea rows="4" cols="30"></textarea>
+					</div>
+
+					<div class="brick" id="bike-paths">
+						<img class="brick-badge" src="assets/vote.svg">
+			        	<h3>Speed humps</h3>
+			        	<p>Vote for the projects that are important to you.</p>
+			        	<select>
+  							<option value="1">1</option>
+  							<option value="2">2</option>
+  							<option value="3">3</option>
+  							<option value="4">4</option>
+  							<option value="5">5</option>
+  							<option value="6">6</option>
+  							<option value="7">7</option>
+  							<option value="8">8</option>
+  							<option value="9">9</option>
+						</select>
+			        		<p>Comment:</p>
+			        		<textarea rows="4" cols="30"></textarea>			        	
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="brick" id="bike-paths">
+						<img class="brick-badge" src="assets/vote.svg">
+			        	<h3>Street trees</h3>
+			        	<p>Vote for the projects that are important to you.</p>
+			        	<select>
+  							<option value="1">1</option>
+  							<option value="2">2</option>
+  							<option value="3">3</option>
+  							<option value="4">4</option>
+  							<option value="5">5</option>
+  							<option value="6">6</option>
+  							<option value="7">7</option>
+  							<option value="8">8</option>
+  							<option value="9">9</option>
+						</select>
+			        		<p>Comment:</p>
+			        		<textarea rows="4" cols="30"></textarea>			        	
+					</div>
+
+					<div class="brick" id="bike-paths">
+						<img class="brick-badge" src="assets/vote.svg">
+			        	<h3>Curbs</h3>
+			        	<p>Vote for the projects that are important to you.</p>
+			        	<select>
+  							<option value="1">1</option>
+  							<option value="2">2</option>
+  							<option value="3">3</option>
+  							<option value="4">4</option>
+  							<option value="5">5</option>
+  							<option value="6">6</option>
+  							<option value="7">7</option>
+  							<option value="8">8</option>
+  							<option value="9">9</option>
+						</select>
+			        		<p>Comment:</p>
+			        		<textarea rows="4" cols="30"></textarea>			        	
+					</div>
+
+					<div class="brick" id="bike-paths">
+						<img class="brick-badge" src="assets/vote.svg">
+			        	<h3>Traffic signals and stop signs</h3>
+			        	<p>Vote for the projects that are important to you.</p>
+			        	<select>
+  							<option value="1">1</option>
+  							<option value="2">2</option>
+  							<option value="3">3</option>
+  							<option value="4">4</option>
+  							<option value="5">5</option>
+  							<option value="6">6</option>
+  							<option value="7">7</option>
+  							<option value="8">8</option>
+  							<option value="9">9</option>
+						</select>
+			        		<p>Comment:</p>
+			        		<textarea rows="4" cols="30"></textarea>			        	
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="brick" id="bike-paths">
+						<img class="brick-badge" src="assets/vote.svg">
+			        	<h3>Medians</h3>
+			        	<p>Vote for the projects that are important to you.</p>
+			        	<select>
+  							<option value="1">1</option>
+  							<option value="2">2</option>
+  							<option value="3">3</option>
+  							<option value="4">4</option>
+  							<option value="5">5</option>
+  							<option value="6">6</option>
+  							<option value="7">7</option>
+  							<option value="8">8</option>
+  							<option value="9">9</option>
+						</select>
+			        		<p>Comment:</p>
+			        		<textarea rows="4" cols="30"></textarea>			        	
+					</div>
+
+					<div class="brick" id="bike-paths">
+						<img class="brick-badge" src="assets/vote.svg">
+			        	<h3>On-street parking</h3>
+			        	<p>Vote for the projects that are important to you.</p>
+			        	<select>
+  							<option value="1">1</option>
+  							<option value="2">2</option>
+  							<option value="3">3</option>
+  							<option value="4">4</option>
+  							<option value="5">5</option>
+  							<option value="6">6</option>
+  							<option value="7">7</option>
+  							<option value="8">8</option>
+  							<option value="9">9</option>
+						</select>
+			        		<p>Comment:</p>
+			        		<textarea rows="4" cols="30"></textarea>			        	
+					</div>
+
+					<div class="brick" id="bike-paths">
+						<img class="brick-badge" src="assets/vote.svg">
+			        	<h3>Turn lanes</h3>
+			        	<p>Vote for the projects that are important to you.</p>
+			        	<select>
+  							<option value="1">1</option>
+  							<option value="2">2</option>
+  							<option value="3">3</option>
+  							<option value="4">4</option>
+  							<option value="5">5</option>
+  							<option value="6">6</option>
+  							<option value="7">7</option>
+  							<option value="8">8</option>
+  							<option value="9">9</option>
+						</select>
+			        		<p>Comment:</p>
+			        		<textarea rows="4" cols="30"></textarea>			        	
+					</div>
+				</div>
+				<div class="row">
+					<form name="vote" action="#" method="get">
+					<input type="submit" value="Submit your Vote!">
+					</form>
+				</div>	
+			</div>
+		
+			<div class="step" id="sign-up">
+				<h2>Step 5</h2>
+				<h1>Sign up to receive notifications</a></h1>
+				<p>If you would like to receive updates on the infrastructure bond, as well as the status of the projects you have voted for in your neighborhood, please provide your contact information below.</p>
+				<div class="row">
+					<form name="sign-up" action="#" method="get">
+					<p>Please enter your email address so we can send you updates (no more than 1 per week):</p>
+					<input type="text" value="email address">
+					<p>Please select your neighborhood:</p>
+					<select>
+  							<option value="1">Midtown</option>
+  							<option value="2">English Avenue</option>
+  							<option value="3">Grant Park</option>
+  							<option value="4">Downtown</option>
+  							<option value="5">Sweet Auburn</option>
+  							<option value="6">Bucktown</option>
+						</select>	
+					<input type="submit" value="Submit">
+					</form>
+				</div>	
+			</div>
+
+		</div><!-- end container-->
+
+		<!-- Footer -->
+    	<div id="footer" class="textcenter">
+      		<p>Created by <a href="http://www.codeforamerica.org"><img class="footerLogo" src="assets/cfa_logo_reverse_lg.png"></a> in partnership with the <a href="http://www.atlantaga.gov">City of Atlanta</a><a href="http://www.atlantaga.gov"><img class="footerLogo" src="assets/atl_seal.png"></a></p>
+    	</div>
+     
+		<script>
+		// functions for "next" button
+		var bgColors = [ "#edcd34", "#ed4097", "#29a1e5", "#3fe5a6", "#9d5fe5", "#edcd34" ]
+		var i = 0
+		$( ".next" ).click(function() {
+		  $(".active").hide("slow");
+  		  $("div.active").next("div").show("slow").toggleClass("active");
+  		  $(".active").prev("div").toggleClass("active");
+  		  i++;
+		  $("body").css( "background-color", bgColors[i] );
+		  $("button.prev").show("fast");
+		});
+
+		// functions for "previous" button
+		$( ".prev" ).click(function() {
+		  $(".active").hide("slow");
+  		  $(".active").prev("div").show("slow").toggleClass("active");
+  		  $(".active").next("div").toggleClass("active");	
+  		  i--;
+  		  console.log(bgColors[i]);  		  
+		  $("body").css( "background-color", bgColors[i] )
+		});
+
+		</script>
+
+	    <!-- Mapbox and Leaflet scripts -->
+
+	    <!-- Infrastructure layers -->
+	    <script type="text/javascript" src="data/resurfacing.js"></script>
+	    <script type="text/javascript" src="data/bridges.js"></script>
+	    <script type="text/javascript" src="data/signals.js"></script>
+	    <script type="text/javascript" src="data/reversible.js"></script>
+	    <script type="text/javascript" src="data/school_flasher.js"></script>
+	    <script type="text/javascript" src="data/unpaved.js"></script>
+
+	    <!-- Base area layers -->
+	    <script type="text/javascript" src="data/city_limits.js"></script>
+	    <script type="text/javascript" src="data/quadrants.js"></script>
+	    <script type="text/javascript" src="data/council_districts.js"></script>
+	    <script type="text/javascript" src="data/npus.js"></script>
+	    <script type="text/javascript" src="data/neighborhoods.js"></script>
+
+	    <script>
+			var map = L.mapbox.map('map', 'codeforamerica.i4ha22b7')
+	    		.setView([33.75, -84.39], 14);
+
+	    	// Style functions
+	    	function getColorByPriority(p) {
+			    return p == 'LOW' 	? 	'#f9db65' :
+			           p == 'MEDIUM' ? 	'#fa934f' :
+			           p == 'HIGH' 	? 	'#ff3535' :
+			           					'#ff3535';
+			}
+
+			function sizeByZoom(zoom) {
+				return 	zoom <  12 					?	0 :
+						zoom >= 12 && zoom <= 13	?	2 :
+						zoom >= 14 && zoom <= 16	?	5 :
+						zoom >= 17 && zoom <= 18	?	7 :
+														0 ;
+
+														
+			};
+
+	    	function lineStyle(feature) {
+	    		return {
+	    			lineCap: "butt",
+					weight: sizeByZoom(map.getZoom()),
+					opacity: 1,
+					color: getColorByPriority(feature.properties.PRIORITY),
+	    		}
+	    	};
+
+	    	var geojsonMarkerOptions = {
+			    radius: sizeByZoom(map.getZoom()),
+			    color: "#fff",
+			    weight: 1,
+			    opacity: 1,
+			    fillOpacity: 1
+			};
+
+			function latlng(coordinates) {
+				return L.coordsToLatLng(coordinates, true);
+			};
+
+			function areaStyle(feature) {
+				return {
+	    			lineCap: "butt",
+					weight: 0.5 * sizeByZoom(map.getZoom()),
+					opacity: 1,
+					color: "#fff",
+					dashArray: "" + sizeByZoom(map.getZoom()) + "," + sizeByZoom(map.getZoom()) + "",
+					fillColor: "hsl(202,82%," + (90 - Math.floor(Math.random() * 40)) + "%)",
+					fillOpacity: 0.5
+				}
+			};
 
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <button type="button" class="close" data-dismiss="alert">×</button>
-      <div class="container">
-        <h1>Welcome!</h1>
-        <p>The City of Atlanta is planning a $250 million infrastructure bond measure, and is currently seeking input from citizens. You can use this site to learn more about the proposed projects, vote on which projects are important to you, and provide feedback on what kinds of improvements you would like to see to Atlanta's pedestrian and transportation infrastructure.</p>
-        </div>
-    </div>
 
-    <!-- Site tools - start -->
-    <div class="container">
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="brick" id="learn">
-          <a href="testmap.html">
-            <img class="brick-badge" src="assets/map.svg">
-            <h1>Learn</h1>
-            <p>Learn more about the proposed projects on our interactive map. </p>
-          </a>
-        </div>
-        <div class="brick" id="vote">
-          <a href="#">
-            <img class="brick-badge" src="assets/vote.svg">
-            <h1>Vote</h1>
-            <p>Vote for the infrastructure projects that matter to you. </p>
-          </a>
-       </div>
-        <div class="brick" id="involve">
-          <a href="#">
-            <img class="brick-badge" src="assets/question.svg">
-            <h1>Get more involved</h1>
-            <p>Find out more about the project timeline and locate a public information session near you.</p>
-          </a>
-        </div>
-      </div>
-    </div>
+			// function areaStyle(feature) {
+			// 	for (i = 0; i < feature.length; i++) {
+			// 		var random = Math.floor(Math.random() * 255);
+			// 		return {
+			// 			weight: sizeByZoom(map.getZoom()),
+			// 			opacity: 1,
+			// 			color: "#fff",
+			// 			fillColor: "rgb(255,255," + random + ")",
+		 //    			fillOpacity: 0.5
+		 //    		}
+		 //    	}
+			// };
+
+	    	// Base geometry
+	    	// L.geoJson(city_limits, 	{style: areaStyle}).addTo(map);
+	    	// L.geoJson(quadrants, 	{style: areaStyle}).addTo(map);
+	    	// L.geoJson(council, 		{style: areaStyle}).addTo(map);
+	    	// L.geoJson(npu, 			{style: areaStyle}).addTo(map);
+	    	L.geoJson(neighborhoods, {style: areaStyle}).addTo(map);
 
 
-
-    <!-- Footer -->
-    <div id="footer" class="textcenter">
-      <hr>
-      <p class="muted">Created by <a href="http://www.codeforamerica.org"><img class="footerLogo" src="assets/cfa_logo_black.png"></a> in partnership with the <a href="http://www.atlantaga.gov">City of Atlanta</a><a href="http://www.atlantaga.gov"><img class="footerLogo" src="assets/atl_seal.png"></a></p>
-    </div>
-    
-
-    <!-- Mapbox & Leaflet scripts -->
-
-    <!-- TileMill -->
-    <script>
-    // var map = L.map('map').setView([33.75, -84.39], 15);
-    // var ui = document.getElementById('map-ui');
-
-    // addLayer(L.mapbox.tileLayer('codeforamerica.i4ha22b7'), 'Base Map', 1);
-    // addLayer(L.mapbox.tileLayer('reveillette.i4gpmfb7'), 'Demographics', 2);
-    // addLayer(L.mapbox.tileLayer('codeforamerica.i4ha22b7.Resurfacing'), 'Street Resurfacing Projects', 3);
-    // addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Bridge Projects', 4);
-    // addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Traffic Signal Projects', 5);
-    // addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Reversible Lane System Projects', 6);
-    // addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'School Zone Flasher Projects', 7);
-    // addLayer(L.mapbox.tileLayer('examples.bike-locations'), 'Unpaved Street Projects', 8);
+	    	// Infrastructure line features
+	    	var resurfacing = L.geoJson(resurfacing, 	{style: lineStyle}).addTo(map);
+	    	var reversible = L.geoJson(reversible, 		{style: lineStyle}).addTo(map);
+	    	var unpaved = L.geoJson(unpaved, 			{style: lineStyle}).addTo(map);
 
 
+	    	// Infrastructure point features
+	    	var markers = new L.MarkerClusterGroup();
+		
+	    	var bridges = L.geoJson(bridges, 		{
+	    		pointToLayer: function (feature, latlng) {
+	    			geojsonMarkerOptions['fillColor'] = getColorByPriority(feature.properties.PRIORITY);
+	    			return L.circleMarker(latlng, geojsonMarkerOptions);
+	    		}
+	    	});
+	    		
+	    	var signals = L.geoJson(signals, 		{
+	     		pointToLayer: function (feature, latlng) {
+	    			geojsonMarkerOptions['fillColor'] = getColorByPriority(feature.properties.PRIORITY);
+	    			return L.circleMarker(latlng, geojsonMarkerOptions);
+	    		}
+	    	});
 
-    // function addLayer(layer, name, zIndex) {
-    //     layer
-    //         .setZIndex(zIndex)
-    //         .addTo(map);
+	    	var flashers = L.geoJson(flashers, 	{
+	    		pointToLayer: function (feature, latlng) {
+	    			geojsonMarkerOptions['fillColor'] = getColorByPriority(feature.properties.PRIORITY);
+	    			return L.circleMarker(latlng, geojsonMarkerOptions);
+	    		}
+	    	});
 
-    //     // Create a simple layer switcher that toggles layers on and off.
-    //     var item = document.createElement('li');
-    //     var link = document.createElement('a');
+	    	markers.addLayer(bridges);
+	    	markers.addLayer(signals);
+	    	markers.addLayer(flashers);
+	    	map.addLayer(markers);
 
-    //     link.href = '#';
-    //     link.className = 'active';
-    //     link.innerHTML = name;
+	    </script>
 
-    //     link.onclick = function(e) {
-    //         e.preventDefault();
-    //         e.stopPropagation();
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
 
-    //         if (map.hasLayer(layer)) {
-    //             map.removeLayer(layer);
-    //             this.className = '';
-    //         } else {
-    //             map.addLayer(layer);
-    //             this.className = 'active';
-    //         }
-    //     };
-
-    //     item.appendChild(link);
-    //     ui.appendChild(item);
-    // }
-    </script>
-
-    <!-- Leaflet -->
-      <!-- Data sources - Infrastructure layers -->
-      <script type="text/javascript" src="./data/unpaved.js"></script>
-
-      <!-- Data sources - Base area layers -->
-
-      <!-- Data sources - Demographics layers -->
-
-
-    <script>
-      var map = L.map('map').setView([33.75, -84.39], 15);
-
-      L.mapbox.tileLayer('codeforamerica.i4ha22b7')
-      
-
-    </script>
-
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-  
-
-<script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script></body></html>
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','UA-XXXXX-X');ga('send','pageview');
+        </script>
+    </body>
+</html>
