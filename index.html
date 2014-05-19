@@ -6,7 +6,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Forward ATL</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="css/styles.css" rel="stylesheet">
@@ -38,15 +38,96 @@
 
         <!-- Site Content -->
 
+     	<div class="header">
+     		<h1>Forward ATL</h1>
+     		<h2>Investing in a commitment today to meet the infrastructure challenges of the future.</h2>
+     	</div>
+     	<!-- end header -->
+
+     	<div class="clear"></div>
+
+        <!-- Progress Bar -->
+     	<div id="timeline"> 			
+ 			
+ 			<div class="timeline-block" id="block-1">
+ 				<a href="#" title="Through public listening forums and this site, citizens can rank selection criteria for the infrastructure bond, which the city will incorporate to develop a draft list of projects.">
+	 				<h3>Phase 1: Selection Criteria</h3>
+	 				<div class="public">
+	 					<h5>Rank Criteria</h5>
+	 					<h6>June 2014</h6>
+	 				</div>
+	 				<img class="arrow" src="assets/forward.png"/>
+	 				<div class="city">
+	 					<h5>Incorporate Rankings</h5>
+	 					<h6>July 2014</h6>
+	 				</div>
+ 				</a>
+ 			</div>
+
+ 			<div class="timeline-block" id="block-2">
+ 				<a href="#" title="Using feedback obtained during follow-up meetings with the public as well as votes tallied from this site, the city will develop a final list of projects to recommend to council.">
+					<h3>Phase 2: Project List</h3> 
+	 				<div class="public">
+	 					<h5>Vote on Projects</h5>
+	 					<h6>August 2014</h6>
+	 				</div>
+	 				<img class="arrow" src="assets/forward.png"/>
+	 				<div class="city">
+	 					<h5>Incorporate Votes</h5>
+	 					<h6>September 2014</h6>
+	 				</div>
+	 			</a>
+			</div> 		
+
+ 			<div class="timeline-block" id="block-3">
+ 				<a href="#" title="Based on input from the public on the selection criteria and the draft list of projects, the city will prepare legislation to City Council to place the bond referendum on the ballot in 2015. Council will review the project list and the proposed legislation during Cycle 20 and 21 in November prior to voting on the request to place the referendum on the ballot in December.">
+ 					<h3>Phase 3: Legislation</h3> 
+	 				<div class="city">
+	 					<h5>Prepare Legislation</h5>
+	 					<h6>October 2014</h6>
+	 				</div>
+	 				<img class="arrow" src="assets/forward.png"/>
+	 				<div class="city">
+	 					<h5>Council Review</h5>
+	 					<h6>November 2014</h6>
+	 				</div>
+	 			</a>
+ 			</div>
+
+ 			<div class="timeline-milestone" id="milestone-1">
+				<a href="#">
+					<h4>Council Vote</h4>
+					<h6>December 1, 2014</h6>
+				</a>
+ 			</div>
+
+ 			<div class="timeline-block" id="block-4">
+ 				<a href="#" title="Phase 4: Beginning sixty (60) days before the election on March 17, 2015, the city will hold public information meetings about the infrastructure bond measure on the ballot.">
+	 				<h3>Phase 4: Election Outreach</h3>
+	  				<div class="city">
+	 					<h5>Public Information Meetings</h5>
+	 					<h6>January-February 2015</h6>
+	 				</div>
+				</a> 			
+ 			</div>
+
+ 			 <div class="timeline-milestone" id="milestone-2">
+ 			 	<a href="#">
+					<h4>Citywide Vote</h4> 
+					<h6>March 17, 2014</h6>
+				</a>
+ 			</div>
+     	</div>
+
      	<button type="button" class="step-button prev"><</button>
      	<button type="button" class="step-button next">></button>
 
         <div class="container">
-
+ 
             <!-- Step 1: introduction -->
 			<div class="active" id="intro">
 				<h2>Step 1</h2>
-				<h1>Atlanta's 2014 Infrastructure Bond Measure</h1>
+				<h1>Atlanta's 2015 Infrastructure Bond</h1>
 				<p>The City of Atlanta is planning a $250 million infrastructure bond measure, and is currently seeking input from citizens. This site was designed with citizens in mind, and will be instrumental in helping the city decide which projects get funded. You can use this site to:</p>
 				<div class="row">
 			        <div class="brick" id="learn">
@@ -359,7 +440,7 @@
   		  $("div.active").next("div").show("slow").toggleClass("active");
   		  $(".active").prev("div").toggleClass("active");
   		  i++;
-		  $("body").css( "background-color", bgColors[i] );
+		  // $("body").css( "background-color", bgColors[i] );
 		  $("button.prev").show("fast");
 		});
 
@@ -370,7 +451,7 @@
   		  $(".active").next("div").toggleClass("active");	
   		  i--;
   		  console.log(bgColors[i]);  		  
-		  $("body").css( "background-color", bgColors[i] )
+		  // $("body").css( "background-color", bgColors[i] )
 		});
 
 		</script>

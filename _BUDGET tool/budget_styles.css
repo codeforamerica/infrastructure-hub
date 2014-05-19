@@ -1,0 +1,661 @@
+
+#wp-ezra-taxplan {
+	width: 606px;
+	margin: 5px;
+	position: relative;
+}
+
+#wp-ezra-taxplan .options {
+}
+
+#wp-ezra-taxplan .options .category {
+	margin-bottom: 10px;
+}
+
+#wp-ezra-taxplan .options .category-header {
+	margin-top: 20px;
+}
+
+#wp-ezra-taxplan .options .category:first-child .category-header {
+	margin-top: 0;
+}
+
+#wp-ezra-taxplan .category.disabled .option  {
+    display: none;
+}
+
+#wp-ezra-taxplan .category.disabled {
+    display: none;
+}
+
+
+#wp-ezra-taxplan .options .category-header .title {
+	font-size: 18px;
+	font-family: Georgia, serif;
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+#wp-ezra-taxplan .options .category-header .description {
+    font-family: georgia;
+    font-size: 13px;
+    line-height: 16px;
+	margin-bottom: 10px;
+}
+
+#wp-ezra-taxplan .options .category-header .select {
+	text-transform: uppercase;
+	font-size: 10px;
+	width: 43px;
+	padding-left: 4px;
+}
+
+#wp-ezra-taxplan .options .category-header .select {
+	text-transform: uppercase;
+	font-size: 10px;
+	width: 43px;
+	padding-left: 4px;
+	display: inline-block;
+	width: 474px;
+}
+
+#wp-ezra-taxplan .options .category-header .in-billions {
+	display: inline-block;
+	text-transform: uppercase;
+	font-size: 10px;	
+}
+
+#wp-ezra-taxplan .options .category.Caps .category-header .select,
+#wp-ezra-taxplan .options .category.Caps .category-header .in-billions {
+	display: none;
+}
+
+#wp-ezra-taxplan .options .category.Deductions {
+	display: none;
+}
+
+#wp-ezra-taxplan .options .category.Caps {
+	margin-bottom: 0;
+}
+
+#wp-ezra-taxplan .options .caps-category-switch {
+	background: #92A1AB url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/arrow-sprite-new.png) no-repeat 581px 8px;
+	color: #FFF;
+    font-size: 15px;
+    font-family: arial;
+	padding: 7px 0;
+	width: 100%;
+	text-align: center;
+	cursor: pointer;
+}
+#wp-ezra-taxplan .options .caps-category-switch:hover {
+	background-color: #666;
+}
+
+#wp-ezra-taxplan .options .caps-category-switch.deductions {
+	background-position: 581px -31px;
+}
+
+#wp-ezra-taxplan .options .caps-category-switch.caps .to-caps{
+	display: none;
+}
+
+#wp-ezra-taxplan .options .caps-category-switch.deductions .to-deductions{
+	display: none;
+}
+
+#wp-ezra-taxplan .options .option {
+    font-size: 15px;
+    padding: 8px 0 8px;
+	color: #444;
+	position: relative;
+	border-bottom: 2px solid #999;
+	cursor: pointer;
+}
+
+#wp-ezra-taxplan .options .option.exclusive-below {
+    border-bottom: 1px solid #CCC;
+}
+
+#wp-ezra-taxplan .options .option:last-child {
+	border: none;
+}
+
+#wp-ezra-taxplan .options .option.disabled {
+	color: #AAA;
+}
+
+#wp-ezra-taxplan .options .option.highlighted, #wp-ezra-taxplan .options .option:hover {
+	background-color: #F5F0D5;
+}
+
+#wp-ezra-taxplan .options .option > * {
+	display: table-cell;
+	vertical-align: top;
+	padding: 0 5px;
+}
+
+#wp-ezra-taxplan .option .toggle {
+	width: 34px;
+	height: 12px;
+	border: 1px solid #999;
+	background-color: #FFF;
+	cursor: pointer;
+}
+
+#wp-ezra-taxplan .category.Deductions .option .toggle:hover {
+	background-color: #ffdfb6;
+}
+#wp-ezra-taxplan .category.Exemptions .option .toggle:hover {
+	background-color: #c4e0f5;
+}
+#wp-ezra-taxplan .category.Credits .option .toggle:hover {
+	background-color: #e5c1dc;
+}
+#wp-ezra-taxplan .category.taxes .option .toggle:hover,
+#wp-ezra-taxplan .category.rates .option .toggle:hover {
+	background-color: #d4e6cc;
+}
+
+#wp-ezra-taxplan .category.Deductions .option.selected .toggle {
+	background-color: #f8a35b;
+}
+#wp-ezra-taxplan .category.Exemptions .option.selected .toggle {
+	background-color: #00aeef;
+}
+#wp-ezra-taxplan .category.Credits .option.selected .toggle {
+	background-color: #C23E96;
+}
+#wp-ezra-taxplan .category.taxes .option.selected .toggle,
+#wp-ezra-taxplan .category.rates .option.selected .toggle {
+	background-color: #74be69;
+}
+
+#wp-ezra-taxplan .option.disabled .toggle {
+	opacity: .2;
+}
+
+#wp-ezra-taxplan .option .title {
+	width: 249px;
+}
+
+#wp-ezra-taxplan .option .info-tip {
+	font-size: 11px;
+	color: #999;
+	font-style: italic;
+	width: 91px;
+	visibility: hidden;
+}
+
+#wp-ezra-taxplan .option:hover .info-tip {
+	visibility: visible;
+}
+
+#wp-ezra-taxplan .option.highlighted .info-tip {
+	visibility: hidden;
+}
+
+#wp-ezra-taxplan .option .cost {
+	width: 60px;
+	text-align: right;
+}
+
+
+#wp-ezra-taxplan .option .square-wrap {
+}
+
+#wp-ezra-taxplan .option .square-wrap > div {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-gray.gif);
+	display: inline-block;
+	transition: width 500ms;
+	-moz-transition: width 500ms;
+	-webkit-transition: width 500ms;
+	-o-transition: width 500ms;
+}
+
+#wp-ezra-taxplan .category.Caps .option:hover .square-wrap > div {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-orange-semi-caps.gif);
+}
+
+#wp-ezra-taxplan .category.Deductions .option.button-hover .square-wrap > div {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-orange-semi.gif);
+}
+
+#wp-ezra-taxplan .category.Exemptions .option.button-hover .square-wrap > div {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-blue-semi.gif);
+}
+
+#wp-ezra-taxplan .category.Credits .option.button-hover .square-wrap > div {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-purple-semi.gif);
+}
+#wp-ezra-taxplan .category.taxes .option.button-hover .square-wrap > div,
+#wp-ezra-taxplan .category.rates .option.button-hover .square-wrap > div {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-green-semi.gif);
+}
+
+#wp-ezra-taxplan .category.Caps .option.selected .square-wrap > div,
+#wp-ezra-taxplan .category.Deductions .option.selected .square-wrap > div {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-orange.gif);
+}
+
+#wp-ezra-taxplan .category.Exemptions .option.selected .square-wrap > div {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-blue.gif);
+}
+
+#wp-ezra-taxplan .category.Credits .option.selected .square-wrap > div {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-purple.gif);
+}
+#wp-ezra-taxplan .category.taxes .option.selected .square-wrap > div,
+#wp-ezra-taxplan .category.rates .option.selected .square-wrap > div {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-green.gif);
+}
+
+#wp-ezra-taxplan .option .square-wrap .big-part {
+}
+
+#wp-ezra-taxplan .option .square-wrap .small-part {
+	margin-left: -3px;
+	width: 5px;
+}
+
+#wp-ezra-taxplan .option .more-details{
+	display: none;
+	overflow: hidden;
+	height: 0px;
+	transition: height 300ms;
+	-moz-transition: height 300ms;
+	-webkit-transition: height 300ms;
+	-o-transition: height 300ms;	
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details{
+	display: block;
+	height: auto;
+	margin: 5px 0 5px 46px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .description{
+	font-size: 12px;
+    line-height: 15px;
+	color: #666;
+	padding-right: 25px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .money-text{
+    color: #E28F26;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 7px 0 10px;
+    line-height: 17px;
+	padding-right: 25px;
+}
+
+#wp-ezra-taxplan .category.Deductions .option.highlighted .more-details .money-text {
+	color:#f8a35b;
+}
+#wp-ezra-taxplan .category.Exemptions .option.highlighted .more-details .money-text {
+	color:#00aeef;
+}
+#wp-ezra-taxplan .category.Credits .option.highlighted .more-details .money-text {
+	color:#C23E96;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group {
+	float: left;
+	border-right: 1px #CCC solid;
+    width: 170px;
+    padding: 0 5px 0 10px;
+    height: 95px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group.low {
+	padding-left: 0;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group.middle {
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group.high {
+	border: none;
+	padding-right: 0;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group .income-circles {
+	display: inline-block;
+	height: 76px;
+	width: 69px;
+	position: relative;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group .income-circles > div{
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/circle-gray.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group .income-circles .big-part {
+	width: 69px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group .income-circles .small-part {
+	height: 6px;
+}
+
+#wp-ezra-taxplan .category.Deductions .option.highlighted .more-details .income-group .income-circles .filled {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/circle-orange.png);
+}
+#wp-ezra-taxplan .category.Exemptions .option.highlighted .more-details .income-group .income-circles .filled {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/circle-blue.png);
+}
+#wp-ezra-taxplan .category.Credits .option.highlighted .more-details .income-group .income-circles .filled {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/circle-purple.png);
+}
+
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group.low .income-circles .big-part.background {
+	height:69px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group.low .income-circles .small-part.background {
+	width:27px;
+	top:70px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group.middle .income-circles .big-part.background {
+	height:20px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group.middle .income-circles .small-part.background {
+	width:20px;
+	top:21px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group.high .income-circles .big-part.background {
+	height:13px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group.high .income-circles .small-part.background {
+	width:34px;
+	top:14px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group-label {
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group-label {
+	font-size: 14px;
+	font-family: Georgia, serif;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group-details {
+	display: inline-block;
+	width: 87px;
+	margin-left: 7px;
+	font-size: 11px;
+	font-family: Helvetica, Arial, sans-serif;
+	vertical-align: top;
+	line-height: 11px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group-details > div:nth-child(1),
+#wp-ezra-taxplan .option.highlighted .more-details .income-group-details > div:nth-child(3) {
+	font-weight: bold;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group-details > div:nth-child(2) {
+	margin: 3px 0 6px;
+}
+
+#wp-ezra-taxplan .option.highlighted .more-details .income-group-details > div:nth-child(4) {
+	margin-top: 3px;
+}
+#wp-ezra-taxplan .category.Caps .option {
+    display: inline-block;
+    width: 194px;
+    border: none;
+	background-color: #eaeced;
+    margin: 25px 8px 0 0;
+    height: 105px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+#wp-ezra-taxplan .category.Caps .option.selected {
+    background-color: #f5f0d5;
+}
+
+#wp-ezra-taxplan .category.Caps .option:last-child {
+	margin-right: 0;
+}
+
+#wp-ezra-taxplan .category.Caps .option > * {
+    display: block;
+}
+#wp-ezra-taxplan .category.Caps .option .label-selected {
+    text-transform: uppercase;
+    font-size: 12px;
+	background-color: #eaeced;
+    margin: 0 auto;
+    width: 106px;
+    position: absolute;
+    top: -15px;
+    padding: 4px 0px;
+    border-radius: 6px;
+    left: 44px;
+    text-align: center;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+#wp-ezra-taxplan .category.Caps .option.selected .label-selected {
+    background-color: #f5f0d5;
+}
+
+#wp-ezra-taxplan .category.Caps .option:hover {
+	background-color: #f5f0d5;
+}
+
+#wp-ezra-taxplan .category.Caps .option:hover .label-selected,
+#wp-ezra-taxplan .category.Caps .option.disabled:hover .label-selected {
+	background-color: #f5f0d5;
+}
+
+
+#wp-ezra-taxplan .category.Caps .option .label-selected .selected-suffix {
+	display: none;
+}
+
+#wp-ezra-taxplan .category.Caps .option.selected .label-selected .selected-suffix {
+	display: inline;
+}
+
+#wp-ezra-taxplan .category.Caps .option .pre-title {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 6px;
+}
+#wp-ezra-taxplan .category.Caps .option .title {
+	text-align: center;
+	font-size: 23px;
+	font-family: Georgia, serif;
+	width: 100%;
+	padding: 0;
+	margin-bottom:10px;
+	color: #E28F26;
+	font-weight: bold;
+}
+
+#wp-ezra-taxplan .category.Caps .option.disabled .title {
+	color: #D9DCDE;
+}
+
+#wp-ezra-taxplan .category.Caps .option .square-wrap {
+    text-align: center;
+	height: 29px;
+}
+
+#wp-ezra-taxplan .category.Caps .option .cost {
+    text-align: center;
+	width: 100%;
+	padding: 0;
+	margin-top: 5px;
+	font-size: 14px;
+}
+
+#wp-ezra-taxplan .category.Caps .option.disabled .cost {
+	color: #D9DCDE;
+}
+
+#wp-ezra-taxplan .totals-placeholder {
+	height: 0px;
+	overflow: hidden;
+}
+
+#wp-ezra-taxplan .totals {
+	padding: 5px 0 10px;
+	margin-bottom: 15px;
+}
+
+#wp-ezra-taxplan .totals .left-block {
+	display: inline-block;
+	width: 250px;
+}
+
+#wp-ezra-taxplan .totals .right-block {
+	display: inline-block;
+	width: 350px;
+	text-align: right;
+}
+
+#wp-ezra-taxplan .totals.fixedfloating {
+	position: fixed;
+	z-index: 999;
+	background-color: #FFF;
+	width: 606px;
+	border-bottom: 2px solid #CCC;
+	top: 0;
+}
+
+#wp-ezra-taxplan .totals.bottomholding {
+	position: absolute;
+	z-index: 999;
+	background-color: #FFF;
+	width: 606px;
+	border-bottom: 2px solid #CCC;
+}
+
+#wp-ezra-taxplan .totals .title {
+	font-size: 17px;
+	font-weight: bold;
+	font-family: Georgia, serif;
+	margin-bottom: 10px;
+	margin-top: 1px;
+}
+
+#wp-ezra-taxplan .totals .indicator {
+	display: inline-block;
+    color: #C00;
+    font-size: 15px;
+	font-family: Georgia, serif;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+#wp-ezra-taxplan .totals .indicator.success {
+	color: #84AD40;
+}
+
+#wp-ezra-taxplan .totals  .reset-button {
+	display: inline-block;
+	margin-left: 7px;
+    color: #666;
+	border: 1px solid #CCC;
+	background-color: #F1F1F1;
+	text-transform: uppercase;
+	font-weight: normal;
+	font-size: 11px;
+	padding: 3px 4px 2px;
+	font-family: Arial, sans-serif;
+	cursor: pointer;
+	vertical-align: 2px;
+}
+
+#wp-ezra-taxplan .totals .reset-button:hover {
+	background-color: #E8E8E8;
+	color: #000;
+}
+
+#wp-ezra-taxplan .totals .legend {
+	font-size: 10px;
+	text-transform: uppercase;
+	background: transparent url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-large-gray.png) no-repeat 1px 1px;
+	padding-left: 16px;
+	margin-left: 2px;
+}
+
+#wp-ezra-taxplan .totals .scorecard {
+	font-size: 13px;
+}
+
+#wp-ezra-taxplan .totals .squares-container {
+	position: relative;
+	width: 599px;
+	height: 79px;
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-large-gray.png);
+	margin: 4px auto 0;
+	overflow: hidden;
+}
+
+#wp-ezra-taxplan .totals .squares-container > * {
+	position: absolute;
+	width: 0px;
+	top:0;
+	left:0;
+}
+
+#wp-ezra-taxplan .totals .squares-container .deductions {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-large-orange.gif);
+}
+
+#wp-ezra-taxplan .totals .squares-container .expenditures {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-large-blue.gif);
+}
+
+#wp-ezra-taxplan .totals .squares-container .credits {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-large-purple.gif);
+}
+
+#wp-ezra-taxplan .totals .squares-container .taxes {
+	background-image: url(http://media.washingtonpost.com/wp-srv/special/politics/tax-cuts-meter/images/square-large-green.gif);
+}
+
+#wp-ezra-taxplan .totals .squares-container .small-part {
+	transition: height 300ms;
+	-moz-transition: height 300ms;
+	-webkit-transition: height 300ms;
+	-o-transition: height 300ms;
+	transition: left 300ms;
+	-moz-transition: left 300ms;
+	-webkit-transition: left 300ms;
+	-o-transition: left 300ms;
+}
+
+#wp-ezra-taxplan .totals .squares-container .big-part {
+	height: 79px;
+	transition: width 300ms;
+	-moz-transition: width 300ms;
+	-webkit-transition: width 300ms;
+	-o-transition: width 300ms;
+}
