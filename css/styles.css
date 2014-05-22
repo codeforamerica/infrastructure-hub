@@ -56,51 +56,42 @@ table {
 /* Font styling */
 body {
 	background-color: #fff;
-	font-family: sans-serif;
-	line-height: 1.5;
-}
-
-h1, h2, h3, h4 {
-	font-weight: bold;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 'Ultra-Bold 900';
+	font-family: 'Helvetica Neue', 'Arial', sans-serif; 
+ 	line-height: 1.5;
 }
 
 h1 {
 	margin-top: 20px;
 	font-size: 2.5em;
+	font-weight: 700;
 }
 
 h2 {
-	text-transform: uppercase;
-	font-size: 0.8em;
-	text-decoration: underline;
-}
-
-h2 {
-	margin-top: 10px;
+	color: white;
+	margin-top: 50px;
 	font-size: 1.5em;
+	font-weight: 900;
 }
 
 h3 {
-  margin-top: 10px;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  font-weight: normal;
+  	margin-top: 10px;
+  	text-transform: uppercase;
+  	font-size: 0.75em;
+  	font-weight: normal;
 }
 
 h4 {
 	text-transform: uppercase;
 	font-size: 1em;
-	font-weight: 700;
 	color: #FFF;
+	font-weight: 700;
 }
 
 h5 {
 	text-transform: uppercase;
 	font-size: 0.75em;
-	font-weight: 700;
 	color: #000;
+	font-weight: 700;
 }
 
 h6 {
@@ -115,9 +106,9 @@ ol, ul {
 
 p {
 	margin-top: 10px;
-	font-family: 'Raleway', serif;	
+/*	font-family: 'Raleway', serif;	*/
 	font-weight: 300;
-	color: #333333;
+	color: #888;
 	font-size: 1.2em;
 }
 
@@ -130,61 +121,87 @@ a:hover {
 }
 
 /* Block styling */
-div {
+/* Navbar */
+.navbar {
+	margin-bottom: 0px;
+	border-radius: 0;
+}
+
+.navbar-default {
+	background-color: #fff;
+	min-height: 140px;
+	padding-top: 20px;
+	background-image: url('/assets/banner-01.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	z-index: 1000;
+	border: none;
+}
+
+.navbar a {
 	display: block;
-}
-
-.header {
-	display: block;
-	position: relative;
-	width: 20%;
-	top:0px;
-	margin-left: 5%;
-	padding: 40px 30px;
-	background-color: #183c92;
-	border-bottom-right-radius: 70px;
-	border-bottom-left-radius: 70px;
-}
-
-.header h1 {
-	margin-top: 10px;
-	font-family: 'Raleway', serif;	
-	font-weight: 700;
-	color: #fff;
-	font-size: 1.2em;
-	text-transform: uppercase;
-}
-
-.header h2 {
-	font-family: 'Raleway', serif;	
-	font-weight: 300;
-	color: #ccc;
-	font-size: 0.8em;
+	padding: 10px 0 0 0;
 	text-decoration: none;
-	text-transform: lowercase;
-
 }
 
+.navbar a:hover {
+	text-decoration: none;
+}
+
+.navbar .main-logo {
+	height: 30px;
+}
+
+.navbar h6 {
+	font-size: 1em;
+}
+
+/* Banner */
+#banner {
+	
+}
+
+/* Jumbotron */
+.jumbotron {
+	position: relative;
+	padding: 0 0 40px 0;
+	background-color: #a9dde3;
+	height: auto;
+	overflow: hidden;
+}
+
+.jumbotron h1 {
+	color: white;
+}
+
+.jumbotron p {
+	color: #666;
+}
+
+/* Timeline */
 #timeline {
 	display: block;
-	position: relative;
-	width: 90%;
-	-moz-border-radius: 70px;
-	-webkit-border-radius: 70px;
-	border-radius: 70px;
-	overflow: hidden;
-	margin: 20px auto;
-	height: 100px;
-	background-color: #000;
+	vertical-align: middle;
+	width: 100%;
+	-moz-border-radius: 80px;
+	-webkit-border-radius: 80px;
+	border-radius: 80px;
+/*	overflow: hidden;
+*/	margin: 20px auto 50px auto;
+	height: 40px;
 }
 
 .timeline-block {
 	display: inline-block;
-	background-color: #1bacd1;
+	background-color: #fff;
 	height: 100%;
-	padding: 10px 15px;
-	margin:0;
+	width: 19%;
+	padding: 0px 15px 10px 15px;
+	margin:0 auto;
 	text-align: center;
+	vertical-align: top;
+	cursor: pointer;
 }
 
 .timeline-milestone {
@@ -194,14 +211,17 @@ div {
 	margin:auto 0;
 	color: #fff !important;
 	text-align: center;
-	/*-transform: rotate(-90deg);
-	-webkit-transform: rotate(-90deg);
-	-moz-transform: rotate(-90deg);
-	-ms-transform: rotate(-90deg);*/ 
+	border-radius: 80px;
+
+}
+
+.timeline-hidden {
+	padding-top: 10px;
+	display: none;
 }
 
 .timeline-block a, .timeline-milestone a {
-	padding-top: 10px;
+	padding-top: 15px;
 	text-decoration: none;
 	text-align: center;
 }
@@ -210,11 +230,11 @@ div {
 	background-color: #09d15b; 
 }
 
-.timeline-block .arrow {
+.timeline-image {
 	width: 20px;
 	height: 20px;
 	vertical-align: top;
-	padding-top: 8px;
+	padding-top: 13px;
 }
 
 .timeline-block .info, .timeline-milestone .info {
@@ -231,6 +251,19 @@ div {
 	margin-top: 10px; 
 	display: inline-block;
 }
+
+.public {
+	padding-left: 40px;
+	background-image: url('/assets/person.png');
+	background-size: 1em;
+	background-repeat:no-repeat;
+
+}
+
+.city {
+	background-color: #a9dde3;
+}
+
 #timeline #timeline-border {
 	border: 1px solid #ccc;
 	cursor: pointer;
@@ -239,14 +272,7 @@ div {
 	z-index: 20;
 }
 
-.container {
-	display: block;
-	position: relative;
-	width: 60%;
-	margin: 0 auto;
-	margin-top: 100px;
-}
-
+/* Home Page badges */
 .row {
 	margin: 50px auto;
 	clear: both;
@@ -269,13 +295,20 @@ div {
 }
 
 .brick-badge {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
+}
+
+.brick h1 {
+  text-transform: uppercase;
+  font-size: 0.75em;
+  font-weight: normal;
 }
 
 .brick a {
 	text-decoration: none;
 }
+
 .brick a:hover {
   display: block;
   text-decoration: none;
@@ -284,8 +317,52 @@ div {
 }
 
 .brick p {
-  font-size: 1em;
-  font-weight: 300;
+  color: #bbb;
+  font-size: 21px;
+  font-weight: 200;
+}
+
+#learn h1 {
+  color: #f9db65;
+}
+
+#vote h1 {
+  color: #fa934f;
+}
+
+#involve h1 {
+  color: #ff3535;
+}
+
+.nav-badge {
+  width: 20px;
+  height: 20px;
+}
+
+/* Footer */
+#footer {
+  position: relative;
+  bottom: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  width: 100%;
+  min-height: 60px;
+  background-color: #fff;
+}
+
+.footerLogo {
+  opacity: 0.6;
+  margin-right: 0.35em;
+  margin-left: 0.35em;
+  margin-top: 0.25em;
+  height: 25px;
+  vertical-align: text-bottom;
+}
+
+/* General */
+.textcenter {
+	text-align: center;
 }
 
 .clear {
@@ -300,47 +377,52 @@ div {
 	display: block;
 }
 
+.hide {
+  display: none; 
+}
+
+.muted {
+  color: #999;
+}
 
 
 /* Button styling */
 .step-button {
-position: absolute;   
-top: 50%;
-margin: auto 0;
-cursor: pointer;
-   border: none;
-   background-color: rgba(0,0,0,1);
-   display: block;
-   color: rgba(255,255,255,1);
-   font-weight: bold;
-   font-size: 2em;
-   padding: 20px;
+	position: static;   
+	margin-top: 10%;
+	cursor: pointer;
+	border: none;
+	background-color: rgba(0,0,0,1);
+	display: block;
+	color: rgba(255,255,255,1);
+	font-weight: bold;
+	font-size: 2em;
+	padding: 20px;
 }
 
 .step-button:hover {
-   background-color: rgba(34,34,34,1);
+   background-color: #09d15b;
 }
 
 .step-button:active {
-   background-color: rgba(51,51,51,1);
+   background-color: #09d15b;
 }
 
 .next {
-	right: 0;
+	float: right;
 }
 
 .prev {
-	left: 0;
+	float: left;
 	display: none;
 }
 
-
-/* D3 styline */
-.slice text {
- 	font-size: 1em;
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 400;
-} 
+.arrow {
+	margin: 5px 5px 0 5px;
+	width: 30px;
+	height: 30px;
+	vertical-align: text-top;
+}
 
 /* Map styling */
 
@@ -349,33 +431,15 @@ cursor: pointer;
 	width: 100%;
 }
 
-/* Footer styling */
-#footer {
-	position: relative;
-	bottom: 0;
-  margin-top: 40px;
-  padding-bottom: 30px;
-  padding-top: 10px;
-  width: 100%;
-  min-height: 60px;
-  background-color: black;
-  border-top: 1px solid #000;
+/* CUSTOM CSS */
+
+#info {
+  position: relative;
+  float: left;
+  width: 25%;
+  margin-right: 30px;
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 15px;
 }
 
-#footer p {
-	color: white;
-}
-
-.footerLogo {
-	position: relative;
-	top: 10px;	
-  margin-right: 0.75em;
-  margin-left: 0.75em;
-  margin-top: 0.25em;
-  height: 35px;
-
-}
-
-.textcenter {
-	text-align: center;
-}
