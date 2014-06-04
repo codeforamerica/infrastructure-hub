@@ -1,0 +1,43 @@
+<li class="principle">
+<article>
+<hgroup><h1 id="first">Start with needs*</h1>
+<h2>*user needs not government needs</h2>
+</hgroup><div class="outline">
+<p>
+The design process must start with identifying and thinking about real
+user needs. We should design around those — not around the way the
+‘official process’ is at the moment. We must understand those needs thoroughly
+— interrogating data, not just making assumptions — and we should
+remember that what users ask for is not always what they need.</p>
+</div>
+
+<section class="why"><div class="content">
+<p>We use ‘needs’ as an organising principle since people come to our
+sites to accomplish tasks and to fulfil needs, not just to hang out.
+Focusing on needs means we can concentrate on the things that deliver
+most value for money.</p>
+</div>
+</section><section class="examples open-section"><h2><a href="">Examples</a></h2>
+<div class="content">
+<article class="design"><header><h1>Examples of how we start with needs.</h1>
+<p class="status tried">Tried &amp; tested</p>
+</header><div class="example">
+<img alt="Needs_wall" src="./GDS design principles_files/needs_wall-de2a96461fdf25cf59c2a2f833b6020e.png">
+</div>
+<div class="caption">
+<p>If we start from the wrong place there’s no chance we will get the design right. Before we begin any project we spend a long time working out what the user needs are. <a href="http://digital.cabinetoffice.gov.uk/2011/09/19/introducing-the-needotron-working-out-the-shape-of-the-product/">This blog post explains a bit more about how we do that.</a></p>
+
+</div>
+</article><article class="process"><header><h1>Be clear</h1>
+<p class="status tried">Tried &amp; tested</p>
+</header><div class="example">
+<a href="./GDS design principles_files/example-vat-3a821ac29eacf738e55c5d6c79d4dbcf.png"><img alt="Example-vat" src="./GDS design principles_files/example-vat-3a821ac29eacf738e55c5d6c79d4dbcf.png"></a>
+</div>
+<div class="caption">
+<p><a href="https://www.gov.uk/vat-rates">This VAT page</a> is a good example of a design that results from thinking about user needs. Most people will arrive at this page after a search for VAT rates. The answer most people are after is 20%, so we’ve made that the largest, clearest piece of information on the page. You can get the answer you are looking for incredibly quickly. There is more to VAT than just one rate so we’ve included this but clearly designed as secondary information. There’s a slim chance you’ve arrived at the wrong page so we have links to genuinely related items in the box on the top right.</p>
+<p>The page is simple and clear but contains all the different information you might need.</p>
+</div>
+</article>
+</div>
+</section></article>
+</li>

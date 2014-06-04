@@ -1,24 +1,20 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!-- saved from url=(0050)http://getbootstrap.com/examples/starter-template/ -->
 <html lang="en">
-  <head>
+
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Investing in a commitment today to meet the infrastructure challenges of the future.">
+    <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="assets/favicon.ico">
-    <title>ATL Forward</title>
+
+    <title>ATL Vision 2015</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="http://getbootstrap.com/examples/jumbotron/jumbotron.css" rel="stylesheet">
 
     <!-- Custom styles -->
     <link href="css/styles.css" rel="stylesheet">
@@ -27,36 +23,20 @@
     <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css' rel='stylesheet' /> 
 
-	<!-- MarkerCluster plugin -->
-	<link rel="stylesheet" href="css/MarkerCluster.css" />
-	<link rel="stylesheet" href="css/MarkerCluster.Default.css" />
-	<script src="js/leaflet.markercluster-src.js"></script>
+    <!-- MarkerCluster plugin -->
+    <link rel="stylesheet" href="css/MarkerCluster.css" />
+    <link rel="stylesheet" href="css/MarkerCluster.Default.css" />
+    <script src="js/leaflet.markercluster-src.js"></script>
 
     <!-- JQuery -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
-	<!-- D3 -->
-	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>    	
+    <!-- D3 -->
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>        
 
-	<!-- Google Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Quicksand:300,400,700|Raleway:400,100,200,300,500,600,700,800,900|Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Quicksand:300,400,700|Raleway:400,100,200,300,500,600,700,800,900|Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-
-    <!-- Browser support checks -->
-    <script>
-      var xmlhttp;
-      
-      if (window.XMLHttpRequest)
-        {// code for IE7+, Firefox, Chrome, Opera, Safari
-          xmlhttp=new XMLHttpRequest();
-        }
-      else
-        {// code for IE6, IE5
-          xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-        }
-    </script>
-
-    
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -65,667 +45,311 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } </style><style>[touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style></head>
 
-  <style>
-    [touch-action="none"]{ -ms-touch-action: none; touch-action: none; }[touch-action="pan-x"]{ -ms-touch-action: pan-x; touch-action: pan-x; }[touch-action="pan-y"]{ -ms-touch-action: pan-y; touch-action: pan-y; }[touch-action="scroll"],[touch-action="pan-x pan-y"],[touch-action="pan-y pan-x"]{ -ms-touch-action: pan-x pan-y; touch-action: pan-x pan-y; }</style><style id="clearly_highlighting_css" type="text/css">/* selection */ html.clearly_highlighting_enabled ::-moz-selection { background: rgba(246, 238, 150, 0.99); } html.clearly_highlighting_enabled ::selection { background: rgba(246, 238, 150, 0.99); } /* cursor */ html.clearly_highlighting_enabled {    /* cursor and hot-spot position -- requires a default cursor, after the URL one */    cursor: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--cursor.png") 14 16, text; } /* highlight tag */ em.clearly_highlight_element {    font-style: inherit !important; font-weight: inherit !important;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow.png");    background-repeat: repeat-x; background-position: top left; background-size: 100% 100%; } /* the delete-buttons are positioned relative to this */ em.clearly_highlight_element.clearly_highlight_first { position: relative; } /* delete buttons */ em.clearly_highlight_element a.clearly_highlight_delete_element {    display: none; cursor: pointer;    padding: 0; margin: 0; line-height: 0;    position: absolute; width: 34px; height: 34px; left: -17px; top: -17px;    background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite.png"); background-repeat: no-repeat; background-position: 0px 0px; } em.clearly_highlight_element a.clearly_highlight_delete_element:hover { background-position: -34px 0px; } /* retina */ @media (min--moz-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2) {    em.clearly_highlight_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--yellow@2x.png"); }    em.clearly_highlight_element a.clearly_highlight_delete_element { background-image: url("chrome-extension://pioclpoplcdbaefihamjohnefbikjilc/clearly/images/highlight--delete-sprite@2x.png"); background-size: 68px 34px; } } 
-  </style>
-  </head>
+<body>
 
-  <body>
-
-    <!--[if lt IE 7]>
-        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-
-    <!-- Static navbar -->
-    <div class="navbar navbar-default" role="navigation">
-      	<div class="container">
-        	<div class="navbar-header">
-	        	<a href="index.html">
-	            	<img class="main-logo" src="assets/logotype-01.png" title="ATL Forward">
-     				<h6>Investing in a commitment today to meet the infrastructure challenges of the future.</h6>
-	            </a>
-	        </div>
-	        
-			<!-- <ul class="nav navbar-nav navbar-right">
-			<li><a href="#"><img class="nav-badge" src="assets/map.svg"></a></li>
-			<li><a href="#"><img class="nav-badge" src="assets/vote.svg"></a></li>
-			<li><a href="#"><img class="nav-badge" src="assets/question.svg"></a></li>
-			</ul> -->
-
-			<!-- <form class="navbar-form navbar-right" role="form">
-			<div class="form-group">
-				<input type="text" placeholder="Email" class="form-control" autocomplete="off" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; cursor: pointer; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
-			</div>
-			<div class="form-group">
-				<input type="password" placeholder="Password" class="form-control" autocomplete="off" style="background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3QsPDhss3LcOZQAAAU5JREFUOMvdkzFLA0EQhd/bO7iIYmklaCUopLAQA6KNaawt9BeIgnUwLHPJRchfEBR7CyGWgiDY2SlIQBT/gDaCoGDudiy8SLwkBiwz1c7y+GZ25i0wnFEqlSZFZKGdi8iiiOR7aU32QkR2c7ncPcljAARAkgckb8IwrGf1fg/oJ8lRAHkR2VDVmOQ8AKjqY1bMHgCGYXhFchnAg6omJGcBXEZRtNoXYK2dMsaMt1qtD9/3p40x5yS9tHICYF1Vn0mOxXH8Uq/Xb389wff9PQDbQRB0t/QNOiPZ1h4B2MoO0fxnYz8dOOcOVbWhqq8kJzzPa3RAXZIkawCenHMjJN/+GiIqlcoFgKKq3pEMAMwAuCa5VK1W3SAfbAIopum+cy5KzwXn3M5AI6XVYlVt1mq1U8/zTlS1CeC9j2+6o1wuz1lrVzpWXLDWTg3pz/0CQnd2Jos49xUAAAAASUVORK5CYII=); background-attachment: scroll; background-position: 100% 50%; background-repeat: no-repeat no-repeat;">
-			</div>
-			<button type="submit" class="btn btn-success">Sign in</button>
-			</form> -->
-        </div>       
+    <!-- Navbar -->
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="main-logo" src="assets/logotype-01.png" title="ATL Forward"></a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" onclick="showOverlay('about')">About</a></li>
+                <li><a href="#" onclick="showOverlay('data')">Data</a></li>
+                <li><a href="#" onclick="showOverlay('faq')">FAQ</a></li>
+                <li><a href="#" onclick="showOverlay('help')">Help<img class="navbar-image" src="assets/question-white.svg"></a></li>
+            </ul>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <!-- Main jumbotron -->
-    <div class="jumbotron">
-		<button type="button" class="step-button prev">PREV<img class="arrow" src="assets/back-white.png"/></button>
-     	<button type="button" class="step-button next">NEXT<img class="arrow" src="assets/forward-white.png"/></button>
+    <!-- Main Content -->
+    <div class="container" id="main">
+    
+    <ol class="steps">    
+        <!-- Step 0: Introduction -->
+        <li class="breadcrumbs learn" id="intro">
+            <h1>Welcome to ATL Vision 2015!</h1>
+            <article class="step">
+                <section class="step-left">
+                    <div class="primary">
+                        <p>The City of Atlanta is planning a $250 million bond measure to invest in both transportation and facility infrastructure. Citizen input is a <strong>very</strong> important part of this process, and this website has been to give citizens a place to provide feedback throughout all phases of the project. The city will use this feedback to determine project selection criteria, narrow down the list of final projects, and to update citizens on progress.</p>
+                    </div>
 
-		<div class="container">
+                    <div class="secondary">
+                        <p></p>
+                    </div>
+                </section>    
 
-		    <!-- Step 0: Home -->
-			<div class="step active" id="intro">
-				<h1>Welcome!</h1>
-				<p>The City of Atlanta is planning a $250 million bond measure to invest in both transportation and facility infrastructure. Citizen input is a very important part of this process, and this website has been created to provide a means for collecting valuable feedback from citizens throughout all phases of the project.</p> 
+                <section class="step-right">
+                    <h2>Here's where we are in the process:</h2>
+                    <a class="fullscreen fullscreen-open"></a>                            
+                    <div class="graphic">
+                        <!-- <div id="timeline">             
+                            <div class="timeline-block" id="block-1" title="Through public listening forums and this site, citizens can rank selection criteria for the infrastructure bond, which the city will incorporate to develop a draft list of projects.">
+                                    <h3>Phase 1: Selection Criteria</h3>
+                                    <div class="timeline-block timeline-hidden">
+                                        <div class="public">
+                                            <h5>Rank Criteria</h5>
+                                            <h6>June 2014</h6>
+                                        </div>
+                                        <div class="city">
+                                            <h5>Incorporate Rankings</h5>
+                                            <h6>July 2014</h6>
+                                        </div>
+                                    </div>
+                            </div>
+
+                            <div class="timeline-block" id="block-2">
+                                <a href="#" title="Using feedback obtained during follow-up meetings with the public as well as votes tallied from this site, the city will develop a final list of projects to recommend to council.">
+                                    <h3>Phase 2: Project List</h3> 
+                                    <div class="timeline-hidden">
+                                        <div class="public">
+                                            <h5>Vote on Projects</h5>
+                                            <h6>August 2014</h6>
+                                        </div>
+                                        <img class="arrow" src="assets/forward.png"/>
+                                        <div class="city">
+                                            <h5>Incorporate Votes</h5>
+                                            <h6>September 2014</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>      
+
+                            <div class="timeline-block" id="block-3">
+                                <a href="#" title="Based on input from the public on the selection criteria and the draft list of projects, the city will prepare legislation to City Council to place the bond referendum on the ballot in 2015. Council will review the project list and the proposed legislation during Cycle 20 and 21 in November prior to voting on the request to place the referendum on the ballot in December.">
+                                    <h3>Phase 3: Legislation</h3> 
+                                    <div class="timeline-hidden">
+                                        <div class="city">
+                                            <h5>Prepare Legislation</h5>
+                                            <h6>October 2014</h6>
+                                        </div>
+                                        <img class="arrow" src="assets/forward.png"/>
+                                        <div class="city">
+                                            <h5>Council Review</h5>
+                                            <h6>November 2014</h6>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="timeline-milestone" id="milestone-1">
+                                <a href="#">
+                                    <h4>Council Vote</h4>
+                                    <h6>December 1, 2014</h6>
+                                </a>
+                            </div>
+
+                            <div class="timeline-block" id="block-4">
+                                <a href="#" title="Beginning sixty (60) days before the election on March 17, 2015, the city will hold public information meetings about the infrastructure bond measure on the ballot.">
+                                    <h3>Phase 4: Election Outreach</h3>
+                                    <div class="timeline-hidden">
+                                        <div class="city">
+                                            <h5>Public Information Meetings</h5>
+                                            <h6>January-February 2015</h6>
+                                        </div>
+                                    </div>
+                                </a>            
+                            </div>
+
+                             <div class="timeline-milestone" id="milestone-2">
+                                <a href="#">
+                                    <h4>Citywide Vote</h4> 
+                                    <h6>March 17, 2014</h6>
+                                </a>
+                            </div>
+                        </div>   -->
+                    </div>
+                </section>
+            </article>
+            <div class="clear"></div>
+            <button href="#" class="step-button next" onclick="nextStep('intro','learn')">Next: What is the 2015 infrastructure bond?<img class="arrow" src="assets/forward-white.png"/></button>
+        </li>
+
+        <!-- Step 1: What is the bond? -->
+        <li class="breadcrumbs learn step-hidden" id="learn">
+            <h1>What is the 2015 infrastructure bond?</h1>
+            <article class="step">
+                <section class="step-left">
+                    <div class="primary">
+                        <p>Atlanta’s infrastructure is aging, which presents challenges for both public safety and maintenance. In fact, as of mid-2014, the city has identified an infrastructure  backlog of over 1 billion dollars.</p> 
+                    </div>
+
+                    <div class="secondary">
+                        <p>This backlog consists of $881 million dollars worth of transportation projects, $41 million of fleet upgrades and replacements, and $131 million dollars worth of facility projects. Of this billion-dollar backlog, approximately $305 million (combined) is considered high priority.</p>
+
+                        <p>In an effort to reduce this backlog and invest in making Atlanta an even better place to live, work, bike, walk and drive, the city hopes to issue a $250 million dollar <span class="hovertext" title="A municipal bond is a bond issued by a local government, or their agencies. Potential issuers of municipal bonds include states, cities, counties, redevelopment agencies, special-purpose districts, school districts, public utility districts, publicly owned airports and seaports, and any other governmental entity (or group of governments) at or below the state level. Municipal bonds may be general obligations of the issuer or secured by specified revenues. (Source: Wikipedia, http://en.wikipedia.org/wiki/Municipal_bond)">municipal bond</span> dedicated to both transportation and facility infrastructure.</p>
+                    </div>
+                </section>    
+
+                <section class="step-right">
+                    <h2>What does a billion-dollar backlog look like?</h2>
+                    <a class="fullscreen fullscreen-open"></a>                              
+                    <div class="graphic">
+                    </div>  
+                </section>
+            </article>
+
+            <div>
+                <button href="#" class="step-button prev" onclick="prevStep('learn','intro')"><img class="arrow" src="assets/back-white.png"/>Previous</button>
+
+                <button href="#" class="step-button next" onclick="nextStep('learn','fund')">Next: How will the bond be funded?<img class="arrow" src="assets/forward-white.png"/></button>
+            </div>
+        </li>
+
+        <!-- Step 2: How will it be funded? -->
+        <li class="breadcrumbs learn step-hidden" id="fund">
+            <h1>How will the infrastructure bond be funded?</h1>
+            <article class="step">
+                <section class="step-left">
+                    <div class="primary">
+                        <p>This bond will <strong>NOT</strong> raise taxes for citizens. Instead, it will be funded through a combination of cost savings and revenue generation in the FY2015 budget. Mayor Kasim Reed recently appointed a <a href="http://www.atlantaga.gov/index.aspx?recordid=2673&page=672">Commission on Waste and Efficiency in Government</a> to identify potential cost savings areas, and the city’s Innovation Delivery and Performance Team is also focused on areas where the city can generate new revenue streams.</p> 
+                    </div>
+
+                    <div class="secondary">
+                        <p>Depending on the cost savings and revenue identified, the infrastructure bond may exceed $250 million, meaning that the city will be able to implement even more important projects for the public. However, even if the bond amount increases, the bond will <strong>NOT</strong> increase taxes.</p>
+                    </div>
+                </section>    
+
+                <section class="step-right">
+                    <h2>Funding breakdown</h2>
+                    <a class="fullscreen fullscreen-open"></a>                              
+                    <div class="graphic">
+                    </div>  
+                </section>
+            </article>
+
+            <div>
+                <button href="#" class="step-button prev" onclick="prevStep('fund','learn')"><img class="arrow" src="assets/back-white.png"/>Previous</button>
+
+                <button href="#" class="step-button next" onclick="nextStep('intro','learn')">Next: What is the 2015 infrastructure bond?<img class="arrow" src="assets/forward-white.png"/></button>
+            </div>
+        </li>
+
+    </ol>
+   
+    </div><!-- /.container -->
 
 
-				<!-- Progress Bar -->
-				<h2>Here's where we are in the process:</h2>
+    <!-- Overlays -->
+    <div class="overlay" id="about">
+        <img src="assets/close.png" class="close-button"/>
+        <h2>About this site:</h2>
+        <p>This site was developed by <a title="Code for America Team Atlanta" href="http://codeforamerica.org/cities/atlanta/">Code for America's Atlanta Team</a> in partnership with the <a title="City of Atlanta" href="http://www.atlantaga.gov">City of Atlanta</a> to give citizens an opportunity to provide feedback during the 2015 Infrastructure Bond, and to give the City a venue for collecting feedback and tallying votes on projects across the city. From June XX through XXXX, citizens of Atlanta can vote on their favorite projects.</p> 
+    </div>  
+    
+    <div class="overlay" id="data">  
+        <img src="assets/close.png" class="close-button"/>
+        <h2>Data for this website comes from the following reports:</h2>
+        <p><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=13145">2010 State of the City's Transportation Infrastructure & Fleet</a></p>
+        <p><a href="http://www.atlantaga.gov/modules/showdocument.aspx?documentid=12370">2013 State of the City's Facility Infrastructure & Fleet report.</a></p>
+        <p>These reports were produced by the City of Atlanta's <a title="Department of Public Works" href="http://www.atlantaga.gov/index.aspx?page=193">Department of Public Works</a> and are available for public viewing. You can also download the original data as either GIS or Excel files.</p>
+        <p><a href="#">Download GIS data</a></p>
+        <p><a href="#">Download Excel data</a></p>
+    </div> 
 
-		     	<div id="timeline"> 			
-		 			
-		 			<div class="timeline-block" id="block-1" title="Through public listening forums and this site, citizens can rank selection criteria for the infrastructure bond, which the city will incorporate to develop a draft list of projects.">
-			 				<h3>Phase 1: Selection Criteria</h3>
-			 				<div class="timeline-block timeline-hidden">
-				 				<div class="public">
-				 					<h5>Rank Criteria</h5>
-				 					<h6>June 2014</h6>
-				 				</div>
-				 				<div class="city">
-				 					<h5>Incorporate Rankings</h5>
-				 					<h6>July 2014</h6>
-				 				</div>
-		 					</div>
-		 			</div>
-
-		 			<div class="timeline-block" id="block-2">
-		 				<a href="#" title="Using feedback obtained during follow-up meetings with the public as well as votes tallied from this site, the city will develop a final list of projects to recommend to council.">
-							<h3>Phase 2: Project List</h3> 
-			 				<div class="timeline-hidden">
-				 				<div class="public">
-				 					<h5>Vote on Projects</h5>
-				 					<h6>August 2014</h6>
-				 				</div>
-				 				<img class="arrow" src="assets/forward.png"/>
-				 				<div class="city">
-				 					<h5>Incorporate Votes</h5>
-				 					<h6>September 2014</h6>
-				 				</div>
-				 			</div>
-			 			</a>
-					</div> 		
-
-		 			<div class="timeline-block" id="block-3">
-		 				<a href="#" title="Based on input from the public on the selection criteria and the draft list of projects, the city will prepare legislation to City Council to place the bond referendum on the ballot in 2015. Council will review the project list and the proposed legislation during Cycle 20 and 21 in November prior to voting on the request to place the referendum on the ballot in December.">
-		 					<h3>Phase 3: Legislation</h3> 
-			 				<div class="timeline-hidden">
-				 				<div class="city">
-				 					<h5>Prepare Legislation</h5>
-				 					<h6>October 2014</h6>
-				 				</div>
-				 				<img class="arrow" src="assets/forward.png"/>
-				 				<div class="city">
-				 					<h5>Council Review</h5>
-				 					<h6>November 2014</h6>
-				 				</div>
-				 			</div>
-			 			</a>
-		 			</div>
-
-		 			<div class="timeline-milestone" id="milestone-1">
-						<a href="#">
-							<h4>Council Vote</h4>
-							<h6>December 1, 2014</h6>
-						</a>
-		 			</div>
-
-		 			<div class="timeline-block" id="block-4">
-		 				<a href="#" title="Beginning sixty (60) days before the election on March 17, 2015, the city will hold public information meetings about the infrastructure bond measure on the ballot.">
-			 				<h3>Phase 4: Election Outreach</h3>
-			  				<div class="timeline-hidden">
-				  				<div class="city">
-				 					<h5>Public Information Meetings</h5>
-				 					<h6>January-February 2015</h6>
-				 				</div>
-				 			</div>
-						</a> 			
-		 			</div>
-
-		 			 <div class="timeline-milestone" id="milestone-2">
-		 			 	<a href="#">
-							<h4>Citywide Vote</h4> 
-							<h6>March 17, 2014</h6>
-						</a>
-		 			</div>
-				</div>
-
-
-				<!-- Steps -->
-				<h2>How to use this website:</h2>
-
-				<div class="row">
-			        <div class="brick" id="learn">
-			          <a href="#">
-			            <img class="brick-badge" src="assets/map.svg">
-			            <h3>1. Learn</h3>
-			            <p>Learn more about the infrastructure bond and the kinds of projects the city is proposing.</p>
-			          </a>
-			        </div>
-
-			        <div class="brick" id="vote">
-			          <a href="#">
-			            <img class="brick-badge" src="assets/vote.svg">
-			            <h3>2. Vote</h3>
-			            <p>Provide feedback on what kinds of improvements you would like to see to Atlanta's infrastructure, and vote on the projects that are important to you.</p>
-			          </a>
-			        </div>
-
-			        <div class="brick" id="involve">
-			          <a href="#">
-			            <img class="brick-badge" src="assets/question.svg">
-			            <h3>3. Get more involved</h3>
-			            <p>Find out more about the project timeline and locate a public information session near you.</p>
-			          </a>
-			        </div>
-			    </div>
-			</div>
-
-			
-
-            <!-- Step 2: About -->
-			<div class="step" id="what-is-infrastructure">
-				<h2>Step 2</h2>
-				<h1>What is this infrastructure bond about?</h1>
-				<p>This bond measure is aimed, first and foremost, at high-priority repairs to streets and bridges that have a significant impact on public safety. In addition, a certain amount of funding will also be set aside to develop streetscape and active transportation improvements such as sidewalks and bicycle paths. You can help decide where this money goes by providing your input on this site!</p>
-				<div class="row">
-					<div class="brick"><h3>Budget for public safety improvements:</h3><h1>$XX Million</h1></div>
-					<div class="brick"><h3>Budget for streetscape improvements:</h3><h1>$XX Million</h1></div>
-					<div class="brick"><img width="150px" height="150px" src="assets/piechart.svg"></div>
-				</div>	
-				<p>This bond limits its focus to infrastructure related to general fund government operations such as roads, streets, bridges and sidewalks. The City’s water/sewer infrastructure (including storm water management) and the infrastructure at Hartsfield-Jackson Atlanta International Airport, which receive funding through independent enterprise funds, are not included.</p>
-
-				<div class="row"></div>				
-				<h1>What is an infrastructure project?</h1>
-				<p>Wikipedia defines infrastructure as "the basic physical and organizational structures needed for the operation of a society or enterprise, or the services and facilities necessary for an economy to function. It can be generally defined as the set of interconnected structural elements that provide framework supporting an entire structure of development. It is an important term for judging a country or region's development."</p>
-				<p>In the case of this bond measure, an infrastructure project can mean anything from a bridge repair to road resurfacing to the addition of new sidewalks and bike paths. Take a look at the <a href="#">map</a> to learn more about the specific projects, and for even more information, you can view the City's <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=0CDAQFjAB&url=http%3A%2F%2Fwww.atlantaga.gov%2Fmodules%2Fshowdocument.aspx%3Fdocumentid%3D13145&ei=0tJrU5KxBojQsASdjoGoBw&usg=AFQjCNE593aVtWagWBTgNxyG_pL7DRAuoA&bvm=bv.66111022,d.cWc">FY2010</a> and <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=3&cad=rja&uact=8&ved=0CDYQFjAC&url=http%3A%2F%2Fwww.atlantaga.gov%2Fmodules%2Fshowdocument.aspx%3Fdocumentid%3D12370&ei=49JrU87oG-7NsQSojIGICQ&usg=AFQjCNE75xfAi6ljduloLLap6F1GlQBVeA&bvm=bv.66111022,d.cWc">FY2013</a> infrastructure reports.</p>  
-
-				<div class="row"></div>				
-				<h1>How does this impact me?</h1>
-				<p>(placeholder text) If you live, work, walk, bike or drive in Atlanta, this project will impact you. Most importantly, this is an opportunity for your voice to be heard! If you've ever thought to yourself that you'd like to see your streets get better, this is your chance to have a real impact on your community.</p>
-			</div>
-
-            <!-- Step 3: Map -->
-			<div class="step" id="browse-the-projects">
-				<h2>Step 3</h2>
-				<h1>Browse the infrastructure projects proposed by Atlanta's <a href="http://www.atlantaga.gov/index.aspx?page=193">Department of Public Works</a></h1>
-				<p>The projects on the map below have been designated by the City of Atlanta Department of Public Works as being the most critical infrastructure projects to address with this infrastructure bond. Using the layer control below, you can browse for projects in your neighborhood or council district, or look at different types of projects proposed citywide.</p>
-				<div class="row">
-					<div id="map"></div>
-					<a href="map.html"><p>View full screen<p></a>
-				</div>	
-			</div>
-
-            <!-- Step 4: Vote -->
-			<div class="step" id="vote-for-improvements">
-				<h2>Step 4</h2>
-				<h1>What kinds of improvements would you like to see in your neighborhood?</a></h1>
-				<p>First, read about the different types of improvements below. Then when you're ready, rank them in order of your preference and click submit.</p>
-				<div class="row">
-					<div class="brick" id="bike-paths">
-						<img class="brick-badge" src="assets/vote.svg">
-			        	<h3>Bicycle paths</h3>
-			        	<p>Vote for the projects that are important to you.</p>
-			        	<select>
-  							<option value="1">1</option>
-  							<option value="2">2</option>
-  							<option value="3">3</option>
-  							<option value="4">4</option>
-  							<option value="5">5</option>
-  							<option value="6">6</option>
-  							<option value="7">7</option>
-  							<option value="8">8</option>
-  							<option value="9">9</option>
-						</select>
-			        		<p>Comment:</p>
-			        		<textarea rows="4" cols="30"></textarea>
-					</div>
-
-					<div class="brick" id="bike-paths">
-						<img class="brick-badge" src="assets/vote.svg">
-			        	<h3>Sidewalks</h3>
-			        	<p>Vote for the projects that are important to you.</p>
-			        	<select>
-  							<option value="1">1</option>
-  							<option value="2">2</option>
-  							<option value="3">3</option>
-  							<option value="4">4</option>
-  							<option value="5">5</option>
-  							<option value="6">6</option>
-  							<option value="7">7</option>
-  							<option value="8">8</option>
-  							<option value="9">9</option>
-						</select>
-			        		<p>Comment:</p>
-			        		<textarea rows="4" cols="30"></textarea>
-					</div>
-
-					<div class="brick" id="bike-paths">
-						<img class="brick-badge" src="assets/vote.svg">
-			        	<h3>Speed humps</h3>
-			        	<p>Vote for the projects that are important to you.</p>
-			        	<select>
-  							<option value="1">1</option>
-  							<option value="2">2</option>
-  							<option value="3">3</option>
-  							<option value="4">4</option>
-  							<option value="5">5</option>
-  							<option value="6">6</option>
-  							<option value="7">7</option>
-  							<option value="8">8</option>
-  							<option value="9">9</option>
-						</select>
-			        		<p>Comment:</p>
-			        		<textarea rows="4" cols="30"></textarea>			        	
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="brick" id="bike-paths">
-						<img class="brick-badge" src="assets/vote.svg">
-			        	<h3>Street trees</h3>
-			        	<p>Vote for the projects that are important to you.</p>
-			        	<select>
-  							<option value="1">1</option>
-  							<option value="2">2</option>
-  							<option value="3">3</option>
-  							<option value="4">4</option>
-  							<option value="5">5</option>
-  							<option value="6">6</option>
-  							<option value="7">7</option>
-  							<option value="8">8</option>
-  							<option value="9">9</option>
-						</select>
-			        		<p>Comment:</p>
-			        		<textarea rows="4" cols="30"></textarea>			        	
-					</div>
-
-					<div class="brick" id="bike-paths">
-						<img class="brick-badge" src="assets/vote.svg">
-			        	<h3>Curbs</h3>
-			        	<p>Vote for the projects that are important to you.</p>
-			        	<select>
-  							<option value="1">1</option>
-  							<option value="2">2</option>
-  							<option value="3">3</option>
-  							<option value="4">4</option>
-  							<option value="5">5</option>
-  							<option value="6">6</option>
-  							<option value="7">7</option>
-  							<option value="8">8</option>
-  							<option value="9">9</option>
-						</select>
-			        		<p>Comment:</p>
-			        		<textarea rows="4" cols="30"></textarea>			        	
-					</div>
-
-					<div class="brick" id="bike-paths">
-						<img class="brick-badge" src="assets/vote.svg">
-			        	<h3>Traffic signals and stop signs</h3>
-			        	<p>Vote for the projects that are important to you.</p>
-			        	<select>
-  							<option value="1">1</option>
-  							<option value="2">2</option>
-  							<option value="3">3</option>
-  							<option value="4">4</option>
-  							<option value="5">5</option>
-  							<option value="6">6</option>
-  							<option value="7">7</option>
-  							<option value="8">8</option>
-  							<option value="9">9</option>
-						</select>
-			        		<p>Comment:</p>
-			        		<textarea rows="4" cols="30"></textarea>			        	
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="brick" id="bike-paths">
-						<img class="brick-badge" src="assets/vote.svg">
-			        	<h3>Medians</h3>
-			        	<p>Vote for the projects that are important to you.</p>
-			        	<select>
-  							<option value="1">1</option>
-  							<option value="2">2</option>
-  							<option value="3">3</option>
-  							<option value="4">4</option>
-  							<option value="5">5</option>
-  							<option value="6">6</option>
-  							<option value="7">7</option>
-  							<option value="8">8</option>
-  							<option value="9">9</option>
-						</select>
-			        		<p>Comment:</p>
-			        		<textarea rows="4" cols="30"></textarea>			        	
-					</div>
-
-					<div class="brick" id="bike-paths">
-						<img class="brick-badge" src="assets/vote.svg">
-			        	<h3>On-street parking</h3>
-			        	<p>Vote for the projects that are important to you.</p>
-			        	<select>
-  							<option value="1">1</option>
-  							<option value="2">2</option>
-  							<option value="3">3</option>
-  							<option value="4">4</option>
-  							<option value="5">5</option>
-  							<option value="6">6</option>
-  							<option value="7">7</option>
-  							<option value="8">8</option>
-  							<option value="9">9</option>
-						</select>
-			        		<p>Comment:</p>
-			        		<textarea rows="4" cols="30"></textarea>			        	
-					</div>
-
-					<div class="brick" id="bike-paths">
-						<img class="brick-badge" src="assets/vote.svg">
-			        	<h3>Turn lanes</h3>
-			        	<p>Vote for the projects that are important to you.</p>
-			        	<select>
-  							<option value="1">1</option>
-  							<option value="2">2</option>
-  							<option value="3">3</option>
-  							<option value="4">4</option>
-  							<option value="5">5</option>
-  							<option value="6">6</option>
-  							<option value="7">7</option>
-  							<option value="8">8</option>
-  							<option value="9">9</option>
-						</select>
-			        		<p>Comment:</p>
-			        		<textarea rows="4" cols="30"></textarea>			        	
-					</div>
-				</div>
-				<div class="row">
-					<form name="vote" action="#" method="get">
-					<input type="submit" value="Submit your Vote!">
-					</form>
-				</div>	
-			</div>
-		
-		    <!-- Step 5: Signup -->
-			<div class="step" id="sign-up">
-				<h2>Step 5</h2>
-				<h1>Sign up to receive notifications</a></h1>
-				<p>If you would like to receive updates on the infrastructure bond, as well as the status of the projects you have voted for in your neighborhood, please provide your contact information below.</p>
-				<div class="row">
-					<form name="sign-up" action="#" method="get">
-					<p>Please enter your email address so we can send you updates (no more than 1 per week):</p>
-					<input type="text" value="email address">
-					<p>Please select your neighborhood:</p>
-					<select>
-  							<option value="1">Midtown</option>
-  							<option value="2">English Avenue</option>
-  							<option value="3">Grant Park</option>
-  							<option value="4">Downtown</option>
-  							<option value="5">Sweet Auburn</option>
-  							<option value="6">Bucktown</option>
-						</select>	
-					<input type="submit" value="Submit">
-					</form>
-				</div>	
-			</div>
-		</div>
+    <div class="overlay" id="faq">
+        <img src="assets/close.png" class="close-button"/>
+        <h2>Frequently asked questions:</h2>
+        <p class="question">Who can I contact for more information?</h4>
+        <p class="answer">Rodney Givens, Program Management Officer, City of Atlanta Department of Public Works</p>
+        <p class="answer">Email: <a href="mailto:rcgivens@atlantaga.gov">rcgivens@atlantaga.gov</a></p>
+        <p class="answer">Telephone: 404.330.6739</p>
     </div>
 
-    <!-- Participation steps -->
-    <div class="container">
-      <!-- Example row of columns -->
-      <!-- <div class="row">
-        <div class="brick" id="learn">
-          <a href="testmap.html">
-            <img class="brick-badge" src="assets/map.svg">
-            <h1>Learn</h1>
-            <p>Learn more about the proposed projects on our interactive map. </p>
-          </a>
+    <div class="overlay" id="help">
+        <img src="assets/close.png" class="close-button"/>
+        <h2>How to use this website:</h2>
+        <div class="graphic">
+            <div class="row">
+                <div class="brick" id="learn">
+                    <img class="brick-badge" src="assets/map.svg">
+                    <h3>Step 1. Learn</h3>
+                    <p>Learn more about the infrastructure bond and the kinds of projects the city is proposing.</p>
+                </div>
+
+                <div class="brick" id="vote">
+                    <img class="brick-badge" src="assets/vote.svg">
+                    <h3>Step 2. Vote</h3>
+                    <p>Provide feedback on what kinds of improvements you would like to see to Atlanta's infrastructure, and vote on the projects that are important to you.</p>
+                </div>
+
+                <div class="brick" id="involve">
+                    <img class="brick-badge" src="assets/question.svg">
+                    <h3>Step 3. Get more involved</h3>
+                    <p>Find out more about the project timeline and locate a public information session near you.</p>
+                </div>
         </div>
-        <div class="brick" id="vote">
-          <a href="#">
-            <img class="brick-badge" src="assets/vote.svg">
-            <h1>Vote</h1>
-            <p>Vote for the infrastructure projects that matter to you. </p>
-          </a>
-       </div>
-        <div class="brick" id="involve">
-          <a href="#">
-            <img class="brick-badge" src="assets/question.svg">
-            <h1>Get more involved</h1>
-            <p>Find out more about the project timeline and locate a public information session near you.</p>
-          </a>
-        </div>
-      </div> -->
+    </div>    
     </div>
 
+    <div id="screen"></div>
+
+        
 
     <!-- Footer -->
     <div id="footer" class="textcenter">
-		<hr>
-		<p class="muted">Created by <a href="http://www.codeforamerica.org"><img class="footerLogo" src="assets/cfa_logo_black.png"></a> in partnership with the <a href="http://www.atlantaga.gov">City of Atlanta</a><a href="http://www.atlantaga.gov"><img class="footerLogo" src="assets/atl_seal.png"></a></p>
-			
-		<div class="navbar-collapse collapse">
-			<ul class="nav navbar-nav navbar-right">
-	            <li><a href="#">About</a></li>
-	            <li><a href="#">Data</a></li>
-	            <li><a href="#">Report</a></li>
-	            <li><a href="#">FAQ</a></li>
-	    	</ul>
-		</div>
+        <p class="muted">Created by <a href="http://www.codeforamerica.org"><img class="footerLogo" src="assets/cfa_logo_reverse_lg.png"></a> in partnership with the City of Atlanta</a><a href="http://www.atlantaga.gov"><img class="footerLogo" src="assets/atl_seal.png"></a></p>
     </div>
-    
 
     
+    <script>
+    // Overlays
+    var showOverlay = function(name) {
+        $("#screen").fadeIn("slow");
+        $("#" + name).fadeIn("slow");
+    }  
+
+    // Fullscreen button
+    $( ".fullscreen").click(function () {
+        $("#screen").toggle("slow");
+        $(".step-right").toggleClass("step-right-fullscreen");
+        $(".fullscreen").toggleClass("fullscreen-close");
+        $(".fullscreen").toggleClass("fullscreen-open");
+
+    });
+
+    // Close button
+    $( ".close-button").click(function () {
+        $("#screen").fadeOut("slow");
+        $(".overlay").fadeOut();
+    });
+
+    // Next button
+    var nextStep = function(current, next) {
+        $("#" + current).hide("slow");
+        $("#" + next).show("slow");
+    }
+
+    // Prev button
+    var prevStep = function(current, prev) {
+        $("#" + current).hide("slow");
+        $("#" + prev).show("slow");
+    }
+
+    // Infographic foldout
+    $( ".step-graphic-heading a" ).click(function () {
+        $(".graphic").slideToggle(400);
+        $(".step-graphic").toggleClass("open")
+    });
+    </script>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
   
 
-	<script id="hiddenlpsubmitdiv" style="display: none;"></script><script>try{for(var lastpass_iter=0; lastpass_iter < document.forms.length; lastpass_iter++){ var lastpass_f = document.forms[lastpass_iter]; if(typeof(lastpass_f.lpsubmitorig2)=="undefined"){ lastpass_f.lpsubmitorig2 = lastpass_f.submit; lastpass_f.submit = function(){ var form=this; var customEvent = document.createEvent("Event"); customEvent.initEvent("lpCustomEvent", true, true); var d = document.getElementById("hiddenlpsubmitdiv"); if (d) {for(var i = 0; i < document.forms.length; i++){ if(document.forms[i]==form){ d.innerText=i; } } d.dispatchEvent(customEvent); }form.lpsubmitorig2(); } } }}catch(e){}</script>
-	</body>
-
-	<!-- jQuery -->
-	<script>
-		// functions for timeline
-		$(".timeline-block").click(function(event) {
-			$(".timeline-hidden").slideUp("fast");
-			$(event.target).find(".timeline-hidden").slideDown("fast");
-		});
-
-		// functions for "next" button
-		var bgColors = [ "#edcd34", "#ed4097", "#29a1e5", "#3fe5a6", "#9d5fe5", "#edcd34" ]
-		var i = 0
-		$( ".next" ).click(function() {
-		  $(".active").hide("slow");
-  		  $("div.active").next("div").show("slow").toggleClass("active");
-  		  $(".active").prev("div").toggleClass("active");
-  		  i++;
-		  // $("body").css( "background-color", bgColors[i] );
-		  $("button.prev").show("fast");
-		});
-
-		// functions for "previous" button
-		$( ".prev" ).click(function() {
-		  $(".active").hide("slow");
-  		  $(".active").prev("div").show("slow").toggleClass("active");
-  		  $(".active").next("div").toggleClass("active");	
-  		  i--;
-  		  console.log(bgColors[i]);  		  
-		  // $("body").css( "background-color", bgColors[i] )
-		});
-
-	</script>
-
-
-</html>
-
-
-
-
-
-
-
- 
-
-
-
-   
-     
-		
-	    <!-- Mapbox and Leaflet scripts -->
-
-	    <!-- Infrastructure layers -->
-	    <script type="text/javascript" src="data/resurfacing.js"></script>
-	    <script type="text/javascript" src="data/bridges.js"></script>
-	    <script type="text/javascript" src="data/signals.js"></script>
-	    <script type="text/javascript" src="data/reversible.js"></script>
-	    <script type="text/javascript" src="data/school_flasher.js"></script>
-	    <script type="text/javascript" src="data/unpaved.js"></script>
-
-	    <!-- Base area layers -->
-	    <script type="text/javascript" src="data/city_limits.js"></script>
-	    <script type="text/javascript" src="data/quadrants.js"></script>
-	    <script type="text/javascript" src="data/council_districts.js"></script>
-	    <script type="text/javascript" src="data/npus.js"></script>
-	    <script type="text/javascript" src="data/neighborhoods.js"></script>
-
-	    <script>
-			var map = L.mapbox.map('map', 'codeforamerica.i4ha22b7')
-	    		.setView([33.75, -84.39], 14);
-
-	    	// Style functions
-	    	function getColorByPriority(p) {
-			    return p == 'LOW' 	? 	'#f9db65' :
-			           p == 'MEDIUM' ? 	'#fa934f' :
-			           p == 'HIGH' 	? 	'#ff3535' :
-			           					'#ff3535';
-			}
-
-			function sizeByZoom(zoom) {
-				return 	zoom <  12 					?	0 :
-						zoom >= 12 && zoom <= 13	?	2 :
-						zoom >= 14 && zoom <= 16	?	5 :
-						zoom >= 17 && zoom <= 18	?	7 :
-														0 ;
-
-														
-			};
-
-	    	function lineStyle(feature) {
-	    		return {
-	    			lineCap: "butt",
-					weight: sizeByZoom(map.getZoom()),
-					opacity: 1,
-					color: getColorByPriority(feature.properties.PRIORITY),
-	    		}
-	    	};
-
-	    	var geojsonMarkerOptions = {
-			    radius: sizeByZoom(map.getZoom()),
-			    color: "#fff",
-			    weight: 1,
-			    opacity: 1,
-			    fillOpacity: 1
-			};
-
-			function latlng(coordinates) {
-				return L.coordsToLatLng(coordinates, true);
-			};
-
-			function areaStyle(feature) {
-				return {
-	    			lineCap: "butt",
-					weight: 0.5 * sizeByZoom(map.getZoom()),
-					opacity: 1,
-					color: "#fff",
-					dashArray: "" + sizeByZoom(map.getZoom()) + "," + sizeByZoom(map.getZoom()) + "",
-					fillColor: "hsl(202,82%," + (90 - Math.floor(Math.random() * 40)) + "%)",
-					fillOpacity: 0.5
-				}
-			};
-
-
-
-			// function areaStyle(feature) {
-			// 	for (i = 0; i < feature.length; i++) {
-			// 		var random = Math.floor(Math.random() * 255);
-			// 		return {
-			// 			weight: sizeByZoom(map.getZoom()),
-			// 			opacity: 1,
-			// 			color: "#fff",
-			// 			fillColor: "rgb(255,255," + random + ")",
-		 //    			fillOpacity: 0.5
-		 //    		}
-		 //    	}
-			// };
-
-	    	// Base geometry
-	    	// L.geoJson(city_limits, 	{style: areaStyle}).addTo(map);
-	    	// L.geoJson(quadrants, 	{style: areaStyle}).addTo(map);
-	    	// L.geoJson(council, 		{style: areaStyle}).addTo(map);
-	    	// L.geoJson(npu, 			{style: areaStyle}).addTo(map);
-	    	L.geoJson(neighborhoods, {style: areaStyle}).addTo(map);
-
-
-	    	// Infrastructure line features
-	    	var resurfacing = L.geoJson(resurfacing, 	{style: lineStyle}).addTo(map);
-	    	var reversible = L.geoJson(reversible, 		{style: lineStyle}).addTo(map);
-	    	var unpaved = L.geoJson(unpaved, 			{style: lineStyle}).addTo(map);
-
-
-	    	// Infrastructure point features
-	    	var markers = new L.MarkerClusterGroup();
-		
-	    	var bridges = L.geoJson(bridges, 		{
-	    		pointToLayer: function (feature, latlng) {
-	    			geojsonMarkerOptions['fillColor'] = getColorByPriority(feature.properties.PRIORITY);
-	    			return L.circleMarker(latlng, geojsonMarkerOptions);
-	    		}
-	    	});
-	    		
-	    	var signals = L.geoJson(signals, 		{
-	     		pointToLayer: function (feature, latlng) {
-	    			geojsonMarkerOptions['fillColor'] = getColorByPriority(feature.properties.PRIORITY);
-	    			return L.circleMarker(latlng, geojsonMarkerOptions);
-	    		}
-	    	});
-
-	    	var flashers = L.geoJson(flashers, 	{
-	    		pointToLayer: function (feature, latlng) {
-	    			geojsonMarkerOptions['fillColor'] = getColorByPriority(feature.properties.PRIORITY);
-	    			return L.circleMarker(latlng, geojsonMarkerOptions);
-	    		}
-	    	});
-
-	    	markers.addLayer(bridges);
-	    	markers.addLayer(signals);
-	    	markers.addLayer(flashers);
-	    	map.addLayer(markers);
-
-	    </script>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-    </body>
+</body>
 </html>

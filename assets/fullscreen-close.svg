@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Fullscreen" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<g display="none">
+	<path display="inline" fill-rule="evenodd" clip-rule="evenodd" d="M82.143,35.714L71.429,46.429   c-4.743,4.743-12.975,4.883-17.857,0s-4.743-13.114,0-17.857l10.715-10.714L46.429,0H100v53.571L82.143,35.714z"/>
+	<path display="inline" fill-rule="evenodd" clip-rule="evenodd" d="M35.714,82.143L53.571,100H0V46.429l17.857,17.857   l10.714-10.715c4.743-4.743,12.975-4.883,17.857,0s4.743,13.114,0,17.857L35.714,82.143z"/>
+</g>
+<g>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M30.954,84.525l-9.288,9.284c-4.108,4.112-11.244,4.23-15.475,0   c-4.23-4.23-4.112-11.366,0-15.476l9.285-9.284L0,53.571h46.429V100L30.954,84.525z"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" d="M84.525,30.954L100,46.429H53.571V0l15.476,15.479l9.287-9.288   c4.108-4.112,11.245-4.23,15.476,0c4.23,4.231,4.108,11.367,0,15.476L84.525,30.954z"/>
+</g>
+</svg>
