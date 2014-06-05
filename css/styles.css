@@ -37,13 +37,19 @@ a:hover {
 }
 
 /* Basic colors */
-	color: #24408f; (blue)
+/*	color: #24408f; (blue)
 	color: #2ebcbb; (aqua)
-	color: #09d15b; (green)
+	color: #09d15b; (green)*/
 
 
 
 /* Block styling */
+/* Container */
+
+#main {
+	min-height: 800px;
+}
+
 /* Navbar */
 .navbar-inverse {
 	background-color: black;
@@ -269,10 +275,10 @@ ol.steps > li.involve:before {
 }
 
 .fullscreen-open {
-	content: url('/assets/fullscreen-small.png');
+	content: url("/assets/fullscreen-small.png");
 }
 .fullscreen-close {
-	content: url('/assets/fullscreen-close-small.png');
+	content: url("/assets/fullscreen-close-small.png");
 }
 
 .step-button {
@@ -313,10 +319,8 @@ ol.steps > li.involve:before {
 
 /* Footer */
 #footer {
-	position: absolute;
-  bottom: 0;
-  margin-top: 30px;
   padding-top: 20px;
+  position: relative;
   padding-bottom: 20px;
   width: 100%;
   min-height: 60px;
