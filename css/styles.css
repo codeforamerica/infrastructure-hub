@@ -274,10 +274,10 @@ ol.steps > li.involve:before {
 }
 
 .fullscreen-open {
-	content: url("/assets/fullscreen-small.png");
+	content: url("../assets/fullscreen-small.png");
 }
 .fullscreen-close {
-	content: url("/assets/fullscreen-close-small.png");
+	content: url("../assets/fullscreen-close-small.png");
 }
 
 .step-button {
