@@ -37,6 +37,10 @@
     <!-- Google Fonts -->
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Quicksand:300,400,700|Raleway:400,100,200,300,500,600,700,800,900|Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
+    <!-- Bootstrap form validator -->
+    <script src="js/bootstrapValidator.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrapValidator.min.css" />
+
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
 
@@ -76,7 +80,7 @@
     <div class="container" id="main">
     
     <ol class="steps">    
-        <!-- Step 0: Introduction -->
+        <!-- Step 1: Introduction -->
         <li class="breadcrumbs learn" id="intro">
             <h1>Welcome to ATL Vision 2015!</h1>
             <article class="step">
@@ -89,10 +93,11 @@
                         <p></p>
                     </div>
                 </section>    
+                
+                <a class="fullscreen fullscreen-open"></a>                            
 
                 <section class="step-right">
                     <h2>Here's where we are in the process:</h2>
-                    <a class="fullscreen fullscreen-open"></a>                            
                     <div class="graphic">
                         <!-- <div id="timeline">             
                             <div class="timeline-block" id="block-1" title="Through public listening forums and this site, citizens can rank selection criteria for the infrastructure bond, which the city will incorporate to develop a draft list of projects.">
@@ -191,10 +196,11 @@
                         <p>In an effort to reduce this backlog and invest in making Atlanta an even better place to live, work, bike, walk and drive, the city hopes to issue a $250 million dollar <span class="hovertext" title="A municipal bond is a bond issued by a local government, or their agencies. Potential issuers of municipal bonds include states, cities, counties, redevelopment agencies, special-purpose districts, school districts, public utility districts, publicly owned airports and seaports, and any other governmental entity (or group of governments) at or below the state level. Municipal bonds may be general obligations of the issuer or secured by specified revenues. (Source: Wikipedia, http://en.wikipedia.org/wiki/Municipal_bond)">municipal bond</span> dedicated to both transportation and facility infrastructure.</p>
                     </div>
                 </section>    
+                
+                <a class="fullscreen fullscreen-open"></a>                              
 
                 <section class="step-right">
                     <h2>What does a billion-dollar backlog look like?</h2>
-                    <a class="fullscreen fullscreen-open"></a>                              
                     <div class="graphic">
                     </div>  
                 </section>
@@ -207,7 +213,7 @@
             </div>
         </li>
 
-        <!-- Step 2: How will it be funded? -->
+        <!-- Step 1: How will it be funded? -->
         <li class="breadcrumbs learn step-hidden" id="fund">
             <h1>How will the infrastructure bond be funded?</h1>
             <article class="step">
@@ -220,10 +226,11 @@
                         <p>Depending on the cost savings and revenue identified, the infrastructure bond may exceed $250 million, meaning that the city will be able to implement even more important projects for the public. However, even if the bond amount increases, the bond will <strong>NOT</strong> increase taxes.</p>
                     </div>
                 </section>    
+                
+                <a class="fullscreen fullscreen-open"></a>                              
 
                 <section class="step-right">
                     <h2>Funding breakdown</h2>
-                    <a class="fullscreen fullscreen-open"></a>                              
                     <div class="graphic">
                     </div>  
                 </section>
@@ -232,9 +239,337 @@
             <div>
                 <button href="#" class="step-button prev" onclick="prevStep('fund','learn')"><img class="arrow" src="assets/back-white.png"/>Previous</button>
 
-                <button href="#" class="step-button next" onclick="nextStep('fund','')">Next: What is the 2015 infrastructure bond?<img class="arrow" src="assets/forward-white.png"/></button>
+                <button href="#" class="step-button next" onclick="nextStep('fund','categories')">Next: What is the 2015 infrastructure bond?<img class="arrow" src="assets/forward-white.png"/></button>
             </div>
         </li>
+
+        <!-- Step 1: What kinds of projects will be included? -->
+        <li class="breadcrumbs learn step-hidden" id="categories">
+            <h1>What kinds of projects will be included?</h1>
+            <article class="step">
+                <section class="step-left">
+                    <div class="primary">
+                        <p>This bond focuses first and foremost on critical public safety improvements such as bridge replacement and maintenance, street resurfacing, ADA accessibility, and facility upgrades. In total, there are nine categories of infrastructure projects that will be part of the bond measure, including six types of transportation projects and three types of facilities projects. </p> 
+                    </div>
+
+                    <div class="secondary">
+                        <p>The bond is limited to infrastructure related to general government operations, therefore excluding the City’s water/sewer infrastructure and the infrastructure at Hartsfield-Jackson Atlanta International Airport that receive funding through independent enterprise funds. For facilities, only properties owned outright by the city are included. Leased facilities are excluded from the bond because it is the responsibility of the owners to maintain the properties.</p>                         
+                    </div>
+                </section>    
+				
+				<a class="fullscreen fullscreen-open"></a>                              
+
+                <section class="step-right">
+                    <h2>Project Categories: Transportation Infrastructure</h2>
+                    <div class="graphic">
+                    	<div class="row">
+                    		<div class="brick" id="tia">
+			                    <img class="brick-image" src="assets/projects/tia.jpg">
+			                    <h3>1. <span class="hovertext" title="Transportation Investment Act of 2010">TIA</span> Approved Projects</h3>
+			                    <p>These are projects approved by citywide vote as part of the <a href="http://www.metroatlantatransportationvote.com/" alt="2010 Transportation Investment Act">2010 Transportation Investment Act.</a></p>
+			                </div>
+
+			                <div class="brick" id="bridges">
+			                    <img class="brick-image" src="assets/projects/bridge.jpg">
+			                    <h3>2. Bridges</h3>
+			                    <p>The City of Atlanta is responsible for maintenance of 164 bridges. The safety of these bridges is rated by <span class="hovertext" title="Georgia Department of Transportation">GDOT</span>, who perform a biannual inspection of bridges and assign <span class="hovertext" title="Sufficiency ratings are based on over 20 factors in four categories: (1) structural adequacy and safety; (2) serviceability and functional obsolescence; (3) essentiality for public and (4) special reductions. Note: A low sufficiency rating does not directly correlate to an unsafe bridge. The most current GDOT report was completed in 2009.">Sufficiency Ratings</span> for the bridges. Any bridge with a sufficiency rating below 50 is considered to be a candidate for major repairs or replacement. Any bridge considered unsafe according to these metrics is immediately closed to traffic.</p> 
+			                </div>
+
+			                <div class="brick" id="streets-sidewalks">
+			                    <img class="brick-image" src="assets/projects/streets-sidewalks.jpg">
+			                    <h3>3. Streets and ADA Ramps</h3>
+			                    <p>Street resurfacing consists of either micro-surfacing/crack sealing or milling and overlaying roadways. There are five categories of streets: <span class="hovertext" title="A multi-lane street which functions to move traffic from one district of the city to another that is not designated to serve individual residences. Average 60’ wide">Arterial</span>, <span class="hovertext" title="A multi-lane street which functions to move traffic from residential streets to arterial streets. Average 48’ wide">Collector</span>, <span class="hovertext" title="A street which provides frontage for access to lots and carries traffic to and from adjoining residential properties. Traffic shall have origin or destination in the immediate neighborhood. Traffic volume shall not exceed 1,200 ADT (Average Daily Traffic) at any point of traffic concentration. Average 26’ wide">Residential</span>, <span class="hovertext" title="A street in an industrial area, which carries extreme axial loadings as a result of increased tractortrailer volumes. Average 26’ wide">Industrial</span>, and <span class="hovertext" title="Gravel and/or dirt street which requires routine maintenance (adding new material, shaping, and ditch cutting) on a quarterly basis and after each heavy rain. (See section 12.0 of this report for the fact sheet.)">Unpaved</span>.</p> 
+			                    <p>Furthermore, the city has over 30,000 intersection nodes requiring <span class="hovertext" title="Americans with Disabilities Act of 1990">ADA</span> ramp improvements. DPW is required to install adequate curb ramps at sidewalk locations of all streets resurfaced since 1992.</p>
+			                </div>
+                    	</div>
+                    	<div class="row">
+                    		<div class="brick" id="sidewalks">
+			                    <img class="brick-image" src="assets/projects/sidewalk.jpg">
+			                    <h3>4. Sidewalks and Curbing</h3>
+			                    <p>Although new sidewalks have been installed under the <a href="http://www.atlantaga.gov/index.aspx?page=495" alt="Quality of Life Bond Program">Quality of Life Bond Program</a> much of Atlanta's 2158 miles of sidewalk are past their lifecycle of fifty years, particularly in central Atlanta, where many sidewalks are paved with hexagonal concrete and brick pavers. These sidewalks have deteriorated, and do not meet <span class="hovertext" title="Americans with Disabilities Act of 1990">ADA</span> requirements. Curbing, often constructed of rock or deteriorating concrete, providing insufficient stormwater control. </p> 
+			                </div>
+                    		<div class="brick" id="signals">
+			                    <img class="brick-image" src="assets/projects/signals.jpg">
+			                    <h3>5. Lights, Signals and Signs</h3>
+			                    <p>Upgrades to streetlights, traffic signals, and signs are critical to improving traffic circulation and energy efficiency in Atlanta. Street light improvements are aimed at replacing deteriorating and knocked-down lights, as well as reducing energy costs by incorporating LED lighting. Traffic signal upgrades will establish remote communication to <span class="hovertext" title="Atlanta Traffic Control Center">ATCC</span> and so signals can be adjusted remotely to react to traffic and emergencies (such as a city-wide evacuation). Finally, signage in Atlanta must abide by the <span class="hovertext" title="Manual on Uniform Traffic Control Devices">MUTCD</span> standards for the installation and placement of traffic signs on public roads. These standards include minimum reflectivity, readability, and placement guidelines.</p> 
+			                </div>
+
+			                <div class="brick" id="flashers">
+			                    <img class="brick-image" src="assets/projects/flasher.jpg">
+			                    <h3>6. School Zone Flashers</h3>
+			                    <p>The primary purpose for school zone flashers is to reduce the speed of vehicles in a school zone, in an effort to provide a safer environment for school children. Of 110 school zone flashers in Atlanta, 52 are past their lifecycle.</p> 
+			                </div>
+                    	</div>
+                    </div>
+                    <h2>Project Categories: Facilities Infrastructure</h2>
+  					<div class="graphic">
+                    	<div class="row">
+                    	<div class="brick" id="fire">
+			                    <img class="brick-image" src="assets/projects/fire.jpg">
+			                    <h3>7. Fire Stations</h3>
+			                    <p></p> 
+			                </div>
+                    		<div class="brick" id="police">
+			                    <img class="brick-image" src="assets/projects/police.png">
+			                    <h3>8. Police Precincts</h3>
+			                    <p></p> 
+			                </div>
+
+			                <div class="brick" id="recreation">
+			                    <img class="brick-image" src="assets/projects/recreation.jpg">
+			                    <h3>9. Recreation Centers</h3>
+			                    <p></p> 
+                    	</div>
+  					</div>
+                </section>
+            </article>
+
+            <div>
+                <button href="#" class="step-button prev" onclick="prevStep('categories','fund')"><img class="arrow" src="assets/back-white.png"/>Previous</button>
+
+                <button href="#" class="step-button next" onclick="nextStep('categories','vote1')">Next: What is the 2015 infrastructure bond?<img class="arrow" src="assets/forward-white.png"/></button>
+            </div>
+        </li>
+
+        <!-- Step 2: Vote on project types -->
+        <li class="breadcrumbs vote step-hidden" id="vote1">
+            <h1>Vote on projects you'd like to see in Atlanta!</h1>
+            <article class="step">
+                <section class="step-vote">
+                    <div class="primary">
+                        <p>Before we get started, please tell us a little bit about yourself. This information will be used to make sure the votes are counted evenly among all neighborhoods in Atlanta.</p> 
+                    </div>
+
+                    <form id="basicInfo">
+	                    <div class="form-group">
+	                	    <label>First Name</label>
+		                    <input id="First" class="form-control" name="First" type="text"  placeholder="First Name" />
+		                </div>
+		                <div class="form-group">
+	                	    <label>Last Name</label>            
+							<input id="Last" class="form-control" name="Last" type="text" placeholder="Last Name" />
+						</div>
+					    <div class="form-group">
+	                	    <label>Email Address</label>				
+		               		<input id="Email" class="form-control" name="Email" type="text"  placeholder="johndoe@example.com" />
+		               	</div>
+		               	<div class="form-group">
+	                	    <label>Zip Code*</label>	               	
+							<input id="Zip" class="form-control" name="Zip" type="text"  placeholder="30032" data-bv-notempty data-bv-notempty-message="Zip code is required" />
+						</div>
+						<div class="form-group">
+							<button href="#" type="button" id="ButtonSubmit" class="step-button next" class="btn btn-primary" onclick="nextStep('vote1','vote2');postContactToGoogle()" type="button">Next: Vote on project categories<img class="arrow" src="assets/forward-white.png"/></button> 
+		                </div>
+		            </form>
+	                <p>* Required</p>
+
+                </section>    
+
+               
+            </article>
+
+            <div>
+                <button href="#" class="step-button prev" onclick="prevStep('vote1','categories')"><img class="arrow" src="assets/back-white.png"/>Previous</button>
+            </div>
+        </li>
+
+		<!-- Step 2: Vote on project types -->
+        <li class="breadcrumbs vote step-hidden" id="vote2">
+            <h1>Vote on projects you'd like to see in Atlanta!</h1>
+            <article class="step">
+                <section class="step-vote">
+                    <div class="primary">
+                        <p>Now that you have reviewed the types of projects included in the infrastructure bond, please rank them in order of importance to you.</p> 
+                    </div>
+                    <form id="basicInfo">
+	                    <div class="form-group">
+	                	    <label>TIA Approved Projects</label>
+		                    <select>
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>							</select>
+							  <option value="9">9</option>							</select>
+		                </div>
+	                    <div class="form-group">
+	                	    <label>Bridges</label>
+		                    <select>
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>							</select>
+							  <option value="9">9</option>							</select>
+		                </div>
+	                    <div class="form-group">
+	                	    <label>Streets & ADA Ramps</label>
+		                    <select>
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>							</select>
+							  <option value="9">9</option>							</select>
+		                </div>
+		                <div class="form-group">
+	                	    <label>Sidewalks and Curbing</label>
+		                    <select>
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>							</select>
+							  <option value="9">9</option>							</select>
+		                </div>
+	                    <div class="form-group">
+	                	    <label>Lights, Signals and Signs</label>
+		                    <select>
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>							</select>
+							  <option value="9">9</option>							</select>
+		                </div>
+	                    <div class="form-group">
+	                	    <label>School Zone Flashers</label>
+		                    <select>
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>							</select>
+							  <option value="9">9</option>							</select>
+		                </div>
+	                    <div class="form-group">
+	                	    <label>Fire Stations</label>
+		                    <select>
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>							</select>
+							  <option value="9">9</option>							</select>
+		                </div>
+	                    <div class="form-group">
+	                	    <label>Police Precincts</label>
+		                    <select>
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>							</select>
+							  <option value="9">9</option>							</select>
+		                </div>
+	                    <div class="form-group">
+	                	    <label>Recreation Centers</label>
+		                    <select>
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>							</select>
+							  <option value="9">9</option>							</select>
+		                </div>		                		                		                		                		                		                		                
+						<div class="form-group">
+							<button href="#" type="button" id="ButtonSubmit" class="step-button next" class="btn btn-primary" onclick="nextStep('vote2','vote3');postContactToGoogle()" type="button">Next: Provide Additional Comments<img class="arrow" src="assets/forward-white.png"/></button> 
+		                </div>
+		            </form>
+	                <p>* Required</p>
+                </section>    
+            </article>
+
+            <div>
+                <button href="#" class="step-button prev" onclick="prevStep('vote2','vote1')"><img class="arrow" src="assets/back-white.png"/>Previous</button>
+            </div>
+        </li>
+
+		<!-- Step 2: Vote on project types -->
+        <li class="breadcrumbs vote step-hidden" id="vote3">
+            <h1>Vote on projects you'd like to see in Atlanta!</h1>
+            <article class="step">
+                <section class="step-vote">
+	                <div class="primary">
+                        <p>Would you like to provide any additional comments or feedback on these projects, or on the bond measure in general? Any additional feedback is greatly appreciated.</p> 
+                    </div>
+                    <form id="comments">
+                    	<div class="form-group">
+                    		<label>Comments</label>
+                    		<textarea rows="8" id="comment" class="form-control" name="Comments"></textarea>
+						<div class="form-group">
+							<button href="#" type="button" id="ButtonSubmit" class="step-button next" class="btn btn-primary" onclick="nextStep('vote3','finish');postContactToGoogle()" type="button">Finish<img class="arrow" src="assets/forward-white.png"/></button> 
+		                </div>
+		            </form>
+                </section>    
+            </article>
+
+            <div>
+                <button href="#" class="step-button prev" onclick="prevStep('vote3','vote2')"><img class="arrow" src="assets/back-white.png"/>Previous</button>
+            </div>
+        </li>
+
+        <!-- Step 3: Finish -->
+        <li class="breadcrumbs vote step-hidden" id="finish">
+            <h1>Thank you!</h1>
+            <article class="step">
+                <section class="step-vote">
+	                <div class="primary">
+                        <p>Thank you for participating in ATL Vision 2015! Please check back regularly to vote on more projects and ideas.</p> 
+                        <h2>Stay involved</h2>
+                        <p>To stay involved and learn more about the infrastructure bond, please plan to attend one of five public outreach meetings in June 2014:</p>
+                        <dl>
+                        	<dt>Quadrant 1: June XX, 2014</dt>
+                        	<dd>Location TBD</dd>
+                        	<dt>Quadrant 2: June XX, 2014</dt>
+                        	<dd>Location TBD</dd>                        	
+                        	<dt>Quadrant 3: June XX, 2014</dt>
+                        	<dd>Location TBD</dd>                        	
+                        	<dt>Quadrant 4: June XX, 2014</dt>
+                        	<dd>Location TBD</dd>                        	
+                        	<dt>Central Atlanta: June XX, 2014</dt>
+                        	<dd>Location TBD</dd>
+                        </dl>
+                    </div>    
+                    <div class="secondary">    
+                        <p>For questions and more information, please contact Rodney Givens, Rodney Givens, Program Management Officer, City of Atlanta Department of Public Works at <a href="mailto:rcgivens@atlantaga.gov"> rcgivens@atlantaga.gov</a> or 404.330.6739</p>                        	
+                    </div>
+                    
+                </section>    
+            </article>
+
+            <div>
+                <button href="#" class="step-button prev" onclick="prevStep('vote3','vote2')"><img class="arrow" src="assets/back-white.png"/>Previous</button>
+            </div>
+        </li>
+
 
     </ol>
    
@@ -342,6 +677,58 @@
         $(".graphic").slideToggle(400);
         $(".step-graphic").toggleClass("open")
     });
+    
+    // HTML form to Google Doc
+        function postContactToGoogle() {
+            var first = $('#First').val();
+            var last = $('#Last').val();
+            var email = $('#Email').val();
+            var zip = $('#Zip').val();
+
+                $.ajax({
+                    url: "https://docs.google.com/a/codeforamerica.org/forms/d/111lv4KwonbujLN9bUzC2u6XZDSBthg2j-5tHQESwbqI/formResponse",
+                    data: { "entry.128009741": first, "entry.211626024": last, "entry.1732186825": email, "entry.1135289714": zip },
+                    type: "POST",
+                    dataType: "xml",
+                    statusCode: {
+                        0: function () {
+							alert("Thank you! Your responses have been successfully submitted. Please click the green next button to proceed.");
+						},
+                        200: function () {
+							alert("Thank you! Your responses have been successfully submitted. Please click the green next button to proceed.");
+                        }
+                    }
+                });
+        }
+
+	// Bootstrap Form Validator
+	$(document).ready(function() {
+	    $('#basicInfo').bootstrapValidator({
+	        feedbackIcons: {
+	            valid: 'glyphicon glyphicon-ok',
+	            invalid: 'glyphicon glyphicon-remove',
+	            validating: 'glyphicon glyphicon-refresh'
+	        },
+	        fields: {
+	            Email: {
+	                validators: {
+	                    emailAddress: {
+	                        message: 'Please enter a valid email address'
+	                    }
+	                }
+	            },
+	            Zip: {
+	                validators: {
+	                    between: {
+	                        min: 30032,
+	                        max: 30363,
+	                        message: 'This zip code is not within Atlanta city boundaries'
+	                    }
+	                }
+            	}
+	        }
+	    });
+	});
     </script>
 
     <!-- Bootstrap core JavaScript
@@ -349,6 +736,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
   
 
 </body>

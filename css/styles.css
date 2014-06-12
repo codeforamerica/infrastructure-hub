@@ -36,6 +36,14 @@ a:hover {
 	text-decoration: underline;
 }
 
+dl, h2 {
+	color: #fff;
+}
+
+dl {
+	font-size: 0.8em;
+}
+
 /* Basic colors */
 /*	color: #24408f; (blue)
 	color: #2ebcbb; (aqua)
@@ -105,21 +113,18 @@ ol.steps > li.learn:before {
 	content: "Step 1: Learn";
 	counter-increment: li;
 	color: #09d15b;
-/*	border-top: 1px solid #fff;
-*/}
+}
 
 ol.steps > li.vote:before {
 	content: "Step 2: Vote";
 	counter-increment: li;
-	color: #fff;
-	border-top: 1px solid #fff;
+	color: #09d15b;
 }
 
 ol.steps > li.involve:before {
 	content: "Step 3: Get Involved";
 	counter-increment: li;
-	color: #fff;
-	border-top: 1px solid #fff;
+	color: #09d15b;
 }
 
 .step {
@@ -136,9 +141,8 @@ ol.steps > li.involve:before {
 .step-left {
 	display: block;
 	position: absolute;
-	top: 5em;
+	top: 6.5em;
 	left: 0;
-	margin-top: 25px;
 	width: 40%;
 	float: left;
 }
@@ -156,28 +160,28 @@ ol.steps > li.involve:before {
 .step-right {
 	display: block;
 	position: absolute;
-	top: 5em;
+	top: 6.5em;
 	right: 0;
-	margin-top: 25px;
 	padding: 15px;
 	float: right;
 	background-color: #fff;
 	width: 55%;
 	height: 100%;
 	border-radius: 10px;
+	overflow: auto;
 }
 
 .step-right-fullscreen {
 	display: block;
 	position: absolute;
-	top: 5em;
+	top: 6.5em;
 	right: 0;
-	margin-top: 25px;
 	padding: 15px;
 	background-color: #fff;
 	width: 100%;
 	border-radius: 10px;
 	z-index: 1001;
+	overflow: auto;
 }
 
 .step-right h2 {
@@ -199,6 +203,17 @@ ol.steps > li.involve:before {
 	width: 100%;
 }
 
+/* Vote block */
+.step-vote {
+	display: block;
+	position: absolute;
+	top: 5em;
+	left: 0;
+	margin-top: 25px;
+	width: 100%;
+	float: left;
+}
+
 /* Badges */
 .row {
 	margin: 50px auto;
@@ -210,7 +225,7 @@ ol.steps > li.involve:before {
   position: relative;
   float: left;
   margin: 0 10px;
-  width: 30%;
+  width: 29%;
   border-radius: 15px;
   text-align: center;
   text-decoration: none;
@@ -219,6 +234,13 @@ ol.steps > li.involve:before {
 .brick-badge {
   width: 70px;
   height: 70px;
+}
+
+.brick-image {
+  width: 100%;
+  min-height: 120px;
+  max-height: 240px;
+  border-radius: 10px;
 }
 
 /* Overlays */
@@ -240,7 +262,7 @@ ol.steps > li.involve:before {
 	padding: 20px 30px 30px 30px;
 	width: 50%;
 	min-height: 200px;
-	z-index: 1001;
+	z-index: 1003;
 	border-radius: 20px;
 	background-color: white;
 }
@@ -265,7 +287,7 @@ ol.steps > li.involve:before {
 	position: absolute;
 	cursor: pointer;
 	background-color: white ;
-	top: 0;
+	top: 6.5em;
 	right: -2.5em;
 	padding: 10px;
 	height: 45px;
@@ -278,6 +300,7 @@ ol.steps > li.involve:before {
 }
 .fullscreen-close {
 	content: url("../assets/fullscreen-close-small.png");
+	z-index: 1001;
 }
 
 .step-button {
@@ -333,6 +356,21 @@ ol.steps > li.involve:before {
   margin-top: 0.25em;
   height: 25px;
   vertical-align: text-bottom;
+}
+
+/* Forms */
+.form-control {
+	border-radius: 0;
+	width: 25%;
+}
+
+label {
+	color: #fff;
+}
+
+textarea {
+	width: 100%;
+	resize: both;
 }
 
 /* General */
