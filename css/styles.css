@@ -56,6 +56,7 @@ dl {
 
 #main {
 	min-height: 800px;
+	margin-bottom: 7em;
 }
 
 /* Navbar */
@@ -400,4 +401,11 @@ p.question {
 p.answer {
 	font-size: 1em;
 	margin: 0;
+}
+
+#MKR-Headshot-2011
+{
+    float: left;
+    height: 10em;
+    margin: 0 .7em 0 0;
 }
