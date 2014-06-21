@@ -3,6 +3,7 @@ h1 {
 	color: #fff;
 	font-weight: 600;
 	font-size: 4em;
+	white-space: nowrap;
 }
 
 body {
