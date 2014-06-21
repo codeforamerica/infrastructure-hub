@@ -122,7 +122,7 @@ ol.steps > li.vote:before {
 }
 
 ol.steps > li.involve:before {
-	content: "Step 3: Get Involved";
+	content: "Step 3: Stay Involved";
 	counter-increment: li;
 	color: #09d15b;
 }
