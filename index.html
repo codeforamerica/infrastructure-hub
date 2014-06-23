@@ -334,164 +334,31 @@
                         <p>Now that you have reviewed the types of projects included in the infrastructure bond, please rank them in order of importance to you.</p> 
                     </div>
                     
-                    <div class="sideBySide">
-			<div class="left">
-				<ul class="source connected">
-					<li>TIA Approved Projects</li>
-					<li>Bridges</li>
-					<li>Streets and ADA Ramps</li>
-					<li>Sidewalks and Curbing</li>
-					<li>Lights, Signals and Signs</li>
-					<li>School Zone Flashers</li>
-                        		<li>Fire Stations</li>
-                        		<li>Police Precincts</li>
-                        		<li>Recreation Centers</li>
-				</ul>
-			</div>
-			<div class="right">
-				<ul class="target connected">
-				</ul>
-			</div>
-		</div>
 
                     <form id="basicInfo">
 	                    <div class="form-group">
-                                   <section>
-		
-		<ul class="sortable list">
-			<li>TIA Approved Projects</li>
-			<li>Bridges</li>
-			<li>Streets and ADA Ramps</li>
-			<li>Sidewalks and Curbing</li>
-			<li>Lights, Signals and Signs</li>
-			<li>School Zone Flashers</li>
-                        <li>Fire Stations</li>
-                        <li>Police Precincts</li>
-                        <li>Recreation Centers</li>
-		</ul>
-	</section>
+	                    <input type="hidden" name="key" value="{{ election.key }}">
+			    <input type="hidden" name="uuid" value="{{ uuid }}">
+    			    <input type='text' name='thedata' id='thedata'>
+				<div id="ballot" class="center">
+                                   
+				<ul class="sortable list" id="Order">
+					<li id="TIA Approved Projects">TIA Approved Projects</li>
+					<li id="Bridges">Bridges</li>
+					<li id="Streets and ADA Ramps">Streets and ADA Ramps</li>
+					<li id="Sidewalks and Curbing">Sidewalks and Curbing</li>
+					<li id="Lights, Signals and Signs">Lights, Signals and Signs</li>
+					<li id="School Zone Flashers">School Zone Flashers</li>
+                        		<li id="Fire Stations">Fire Stations</li>
+                        		<li id="Police Precincts">Police Precincts</li>
+                        		<li id="Recreation Centers">Recreation Centers</li>
+				</ul>
+				</div>
 
-
-	                	    <label>TIA Approved Projects</label>
-		                    <select id="Order">
-							  <option value="1">1</option>
-							  <option value="2">2</option>
-							  <option value="3">3</option>
-							  <option value="4">4</option>
-							  <option value="5">5</option>
-							  <option value="6">6</option>
-							  <option value="7">7</option>
-							  <option value="8">8</option>							</select>
-							  <option value="9">9</option>							</select>
-		                </div>
-	                    <div class="form-group">
-	                	    <label>Bridges</label>
-		                    <select>
-							  <option value="1">1</option>
-							  <option value="2">2</option>
-							  <option value="3">3</option>
-							  <option value="4">4</option>
-							  <option value="5">5</option>
-							  <option value="6">6</option>
-							  <option value="7">7</option>
-							  <option value="8">8</option>							</select>
-							  <option value="9">9</option>							</select>
-		                </div>
-	                    <div class="form-group">
-	                	    <label>Streets & ADA Ramps</label>
-		                    <select>
-							  <option value="1">1</option>
-							  <option value="2">2</option>
-							  <option value="3">3</option>
-							  <option value="4">4</option>
-							  <option value="5">5</option>
-							  <option value="6">6</option>
-							  <option value="7">7</option>
-							  <option value="8">8</option>							</select>
-							  <option value="9">9</option>							</select>
-		                </div>
-		                <div class="form-group">
-	                	    <label>Sidewalks and Curbing</label>
-		                    <select>
-							  <option value="1">1</option>
-							  <option value="2">2</option>
-							  <option value="3">3</option>
-							  <option value="4">4</option>
-							  <option value="5">5</option>
-							  <option value="6">6</option>
-							  <option value="7">7</option>
-							  <option value="8">8</option>							</select>
-							  <option value="9">9</option>							</select>
-		                </div>
-	                    <div class="form-group">
-	                	    <label>Lights, Signals and Signs</label>
-		                    <select>
-							  <option value="1">1</option>
-							  <option value="2">2</option>
-							  <option value="3">3</option>
-							  <option value="4">4</option>
-							  <option value="5">5</option>
-							  <option value="6">6</option>
-							  <option value="7">7</option>
-							  <option value="8">8</option>							</select>
-							  <option value="9">9</option>							</select>
-		                </div>
-	                    <div class="form-group">
-	                	    <label>School Zone Flashers</label>
-		                    <select>
-							  <option value="1">1</option>
-							  <option value="2">2</option>
-							  <option value="3">3</option>
-							  <option value="4">4</option>
-							  <option value="5">5</option>
-							  <option value="6">6</option>
-							  <option value="7">7</option>
-							  <option value="8">8</option>							</select>
-							  <option value="9">9</option>							</select>
-		                </div>
-	                    <div class="form-group">
-	                	    <label>Fire Stations</label>
-		                    <select>
-							  <option value="1">1</option>
-							  <option value="2">2</option>
-							  <option value="3">3</option>
-							  <option value="4">4</option>
-							  <option value="5">5</option>
-							  <option value="6">6</option>
-							  <option value="7">7</option>
-							  <option value="8">8</option>							</select>
-							  <option value="9">9</option>							</select>
-		                </div>
-	                    <div class="form-group">
-	                	    <label>Police Precincts</label>
-		                    <select>
-							  <option value="1">1</option>
-							  <option value="2">2</option>
-							  <option value="3">3</option>
-							  <option value="4">4</option>
-							  <option value="5">5</option>
-							  <option value="6">6</option>
-							  <option value="7">7</option>
-							  <option value="8">8</option>							</select>
-							  <option value="9">9</option>							</select>
-		                </div>
-	                    <div class="form-group">
-	                	    <label>Recreation Centers</label>
-		                    <select>
-							  <option value="1">1</option>
-							  <option value="2">2</option>
-							  <option value="3">3</option>
-							  <option value="4">4</option>
-							  <option value="5">5</option>
-							  <option value="6">6</option>
-							  <option value="7">7</option>
-							  <option value="8">8</option>							</select>
-							  <option value="9">9</option>							</select>
+	                	   						</select>
 		                </div>
 <p>* Required</p>		                		                		                		                		                		                		                
-						<div class="form-group">
-							
-		                </div>
+						
 		            
 	                
                 </section>    
@@ -758,6 +625,15 @@
 				items: ':not(.disabled)'
 			});
 		});
+		
+		 $( "#sortable" ).sortable({ axis: "y", containment: "#ballot", scroll: false });
+$( "#sortable" ).disableSelection();
+
+$('form').submit(function(){
+     
+    $('#thedata').val($( "#sortable" ).sortable("serialize"));
+    return false;
+}); 
 	</script>
 
 </body>
