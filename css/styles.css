@@ -420,6 +420,8 @@ ul#Order li
 {
     font-size: 21px;
     font-weight: 200;
+    cursor: grab;
+    cursor: -webkit-grab;
 }
 
 ul#Order li em 
