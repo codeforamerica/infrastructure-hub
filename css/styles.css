@@ -145,7 +145,7 @@ ol.steps > li.involve:before {
 	position: absolute;
 	top: 6.5em;
 	left: 0;
-	width: 45%;
+	width: 50%;
 	float: left;
 }
 
@@ -167,7 +167,7 @@ ol.steps > li.involve:before {
 	padding: 15px;
 	float: right;
 	background-color: #fff;
-	width: 50%;
+	width: 48%;
 	height: 100%;
 	border-radius: 10px;
 	overflow: auto;
