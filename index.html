@@ -337,6 +337,7 @@
 
                     <form id="basicInfo">
 	                    <div class="form-group">
+	                    <form method="POST" action="/vote">
 	                    <input type="hidden" name="key" value="{{ election.key }}">
 			    <input type="hidden" name="uuid" value="{{ uuid }}">
     			    <input type='text' name='thedata' id='thedata'>
@@ -357,7 +358,8 @@
 
 	                	   						</select>
 		                </div>
-<p>* Required</p>		                		                		                		                		                		                		                
+ <button type='submit'>Submit</button>
+</form>		                		                		                		                		                		                		                
 						
 		            
 	                
