@@ -415,3 +415,15 @@ p.answer {
     height: 10em;
     margin: 0 .7em 0 0;
 }
+
+ul#Order li
+{
+    font-size: 21px;
+    font-weight: 200;
+}
+
+ul#Order li em 
+{
+    font-weight: 400;
+    font-style: normal;
+}
