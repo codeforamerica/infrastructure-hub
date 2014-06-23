@@ -37,7 +37,7 @@ a:hover {
 	text-decoration: underline;
 }
 
-dl, h2, li {
+dl, h2 {
 	color: #fff;
 }
 
@@ -419,6 +419,7 @@ p.answer {
 
 ul#Order li
 {
+    color: #fff;
     font-size: 21px;
     font-weight: 200;
     cursor: grab;
