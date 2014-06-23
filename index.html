@@ -555,7 +555,12 @@
             var email = $('#Email').val();
             var zip = $('#Zip').val();
             var comments = $('#Comment').val();
-            var order = $('#thedata').val();
+            
+            // concatenate IDs into a comma-delimited string
+            var ids = [];
+            $('#Order').find('li').each(function() { ids.push($(this).attr('id')) });
+
+            var order = ids.join(', ');
 
                 $.ajax({
                     url: "https://docs.google.com/a/codeforamerica.org/forms/d/11ezDnnLEjBEQMp3akhfDAX-ODYP2yXcCKXO6cV7eJQY/formResponse",
@@ -631,8 +636,8 @@
 $( "#sortable" ).disableSelection();
 
 $('form').submit(function(){
-     
-    $('#thedata').val($( "#sortable" ).sortable("serialize"));
+
+    $('#Order').val($( "#sortable" ).sortable("serialize"));
     return false;
 }); 
 	</script>
