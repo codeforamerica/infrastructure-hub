@@ -332,6 +332,20 @@
                     </div>
                     <form id="basicInfo">
 	                    <div class="form-group">
+
+<input type="hidden" name="key" value="{{ election.key }}">
+<input type="hidden" name="uuid" value="{{ uuid }}">
+    <input type='text' name='thedata' id='thedata'>
+<div id="ballot" class="center">
+<ol id="sortable" class="rankings">
+  <li id='ranking_1' class="ranking">TIA Approved Projects</li>
+  <li id='ranking_2' class="ranking">Bridges</li>
+  <li id='ranking_3' class="ranking">Streets & ADA Ramps</li>
+  <li id='ranking_4' class="ranking">Sidewalks and Curbing</li>
+  <li id='ranking_5' class="ranking">Lights, Signals and Signs</li>
+</ol>
+</div>
+
 	                	    <label>TIA Approved Projects</label>
 		                    <select>
 							  <option value="1">1</option>
@@ -600,6 +614,16 @@
 
     
     <script>
+   // Sortable List
+  $( "#sortable" ).sortable({ axis: "y", containment: "#ballot", scroll: false });
+  $( "#sortable" ).disableSelection();
+
+  $('form').submit(function(){
+     
+    $('#thedata').val($( "#sortable" ).sortable("serialize"));
+    return false;
+ }); 
+
     // Overlays
     var showOverlay = function(name) {
         $("#screen").fadeIn("slow");
