@@ -337,10 +337,9 @@
 
                     <form id="basicInfo">
 	                    <div class="form-group">
-	                    <form method="POST" action="/vote">
+	                    
 	                    <input type="hidden" name="key" value="{{ election.key }}">
 			    <input type="hidden" name="uuid" value="{{ uuid }}">
-    			    <input type='text' name='thedata' id='thedata'>
 				<div id="ballot" class="center">
                                    
 				<ul class="sortable list" id="Order">
@@ -358,8 +357,7 @@
 
 	                	   						</select>
 		                </div>
- <button type='submit'>Submit</button>
-</form>		                		                		                		                		                		                		                
+	                		                		                		                		                		                		                
 						
 		            
 	                
@@ -556,7 +554,7 @@
             var email = $('#Email').val();
             var zip = $('#Zip').val();
             var comments = $('#Comment').val();
-            var order = $('#Order').val();
+            var order = $('#thedata').val();
 
                 $.ajax({
                     url: "https://docs.google.com/a/codeforamerica.org/forms/d/11ezDnnLEjBEQMp3akhfDAX-ODYP2yXcCKXO6cV7eJQY/formResponse",
