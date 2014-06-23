@@ -476,7 +476,7 @@
                     <form id="comments">
                     	<div class="form-group">
                     		<label>Comments</label>
-                    		<textarea rows="8" id="comment" class="form-control" name="Comments"></textarea>
+                    		<textarea rows="8" id="Comment" class="form-control" name="Comments"></textarea>
 						<div class="form-group">
 							      </div>
 		            
@@ -645,10 +645,11 @@
             var last = $('#Last').val();
             var email = $('#Email').val();
             var zip = $('#Zip').val();
+            var comments = $('#Comment').val();
 
                 $.ajax({
                     url: "https://docs.google.com/a/codeforamerica.org/forms/d/11ezDnnLEjBEQMp3akhfDAX-ODYP2yXcCKXO6cV7eJQY/formResponse",
-                    data: { "entry.700536704": first, "entry.395708262": last, "entry.2047074843": email, "entry.1423220522": zip },
+                    data: { "entry.700536704": first, "entry.395708262": last, "entry.2047074843": email, "entry.1423220522": zip, "entry.199545196": comments },
                     type: "POST",
                     dataType: "xml",
                     statusCode: {
