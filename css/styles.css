@@ -41,6 +41,10 @@ dl, h2, li {
 	color: #fff;
 }
 
+#timeline li{
+	color:#000;
+}
+
 dl {
 	font-size: 0.8em;
 }
