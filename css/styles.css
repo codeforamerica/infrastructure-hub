@@ -420,6 +420,8 @@ p.answer {
 ul#Order li
 {
     color: #fff;
+    list-style: none;
+    border: 1px solid #CCC;
     font-size: 21px;
     font-weight: 200;
     cursor: grab;
