@@ -42,7 +42,8 @@ dl, h2, li {
 }
 
 #timeline p,
-#timeline h3{
+#timeline h3,
+.overlay h2{
 	color:#000;
 }
 
