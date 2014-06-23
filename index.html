@@ -614,15 +614,6 @@
 
     
     <script>
-   // Sortable List
-  $( "#sortable" ).sortable({ axis: "y", containment: "#ballot", scroll: false });
-  $( "#sortable" ).disableSelection();
-
-  $('form').submit(function(){
-     
-    $('#thedata').val($( "#sortable" ).sortable("serialize"));
-    return false;
- }); 
 
     // Overlays
     var showOverlay = function(name) {
@@ -715,6 +706,17 @@
 	        }
 	    });
 	});
+	
+	   // Sortable List
+  $( "#sortable" ).sortable({ axis: "y", containment: "#ballot", scroll: false });
+  $( "#sortable" ).disableSelection();
+
+  $('form').submit(function(){
+     
+    $('#thedata').val($( "#sortable" ).sortable("serialize"));
+    return false;
+ }); 
+
     </script>
 
     <!-- Bootstrap core JavaScript
