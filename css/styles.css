@@ -423,8 +423,8 @@ ul#Order li
     margin: 3px;
     padding: 3px;
     list-style: none;
-    border: .5px solid #CCC;
-    font-size: 14px;
+    border: 1px solid #CCC;
+    font-size: 18px;
     font-weight: 200;
     width: 800px;
     cursor: grab;
