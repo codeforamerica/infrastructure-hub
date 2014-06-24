@@ -149,7 +149,7 @@ ol.steps > li.involve:before {
 .step-left {
 	display: block;
 	position: absolute;
-	top: 4.5em;
+	top: 6.5em;
 	left: 0;
 	width: 48%;
 	float: left;
