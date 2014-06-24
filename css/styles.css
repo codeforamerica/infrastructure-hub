@@ -420,13 +420,13 @@ p.answer {
 ul#Order li
 {
     color: #fff;
-    margin: 5px;
-    padding: 5px;
+    margin: 3px;
+    padding: 3px;
     list-style: none;
-    border: 1px solid #CCC;
+    border: .5px solid #CCC;
     font-size: 14px;
     font-weight: 200;
-    width: 600px;
+    width: 800px;
     cursor: grab;
     cursor: -webkit-grab;
 }
