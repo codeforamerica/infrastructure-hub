@@ -418,7 +418,7 @@ p.answer {
     margin: 0 .7em 0 0;
 }
 
-ul#Order li
+ol#Order li
 {
     color: #fff;
     margin: 3px;
@@ -431,7 +431,7 @@ ul#Order li
     cursor: -webkit-grab;
 }
 
-ul#Order li em 
+ol#Order li em 
 {
     font-weight: 400;
     font-style: normal;
