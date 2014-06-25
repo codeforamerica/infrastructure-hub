@@ -354,8 +354,8 @@
 				<div id="ballot" class="center">
                                    
 				<ul class="list" id="Order">
-                    <li>
-                        <select id="TIA Approved Projects">
+                    <li id="TIA Approved Projects">
+                        <select>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -369,8 +369,8 @@
                         </select>
                         <em>TIA Approved Projects</em>
                     </li>
-                    <li>
-                        <select id="Bridges">
+                    <li id="Bridges">
+                        <select>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -384,9 +384,8 @@
                         </select>
                         <em>Bridges</em>
                     </li>
-                    <li>
-                        
-                        <select id="Streets and ADA Ramps">
+                    <li id="Streets and ADA Ramps"> 
+                        <select>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -400,9 +399,8 @@
                         </select>
                         <em>Streets and ADA Ramps</em> 
                     </li>
-                    <li>
-                        
-                        <select id="Sidewalks and Curbing">
+                    <li id="Sidewalks and Curbing">
+                        <select>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -416,9 +414,8 @@
                         </select>
                         <em>Sidewalks and Curbing</em>
                     </li>
-                    <li>
-                        
-                        <select id="Lights, Signals and Signs">
+                    <li id="Lights, Signals and Signs">
+                        <select>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -432,9 +429,8 @@
                         </select>
                         <em>Lights, Signals and Signs</em>
                     </li>
-                    <li>
-                        
-                        <select id="School Zone Flashers">
+                    <li id="School Zone Flashers">
+                        <select>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -448,9 +444,8 @@
                         </select>
                         <em>School Zone Flashers</em>
                     </li>
-                    <li>
-                        
-                        <select id="Fire Stations">
+                    <li id="Fire Stations">
+                        <select>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -464,9 +459,8 @@
                         </select>
                         <em>Fire Stations</em>
                     </li>
-                    <li>
-                        
-                        <select id="Police Precincts">
+                    <li id="Police Precincts">
+                        <select>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -480,9 +474,8 @@
                         </select>
                         <em>Police Precincts</em>
                     </li>
-                    <li>
-                        
-                        <select id="Recreation Centers">
+                    <li id="Recreation Centers">
+                        <select>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -496,9 +489,8 @@
                         </select>
                         <em>Recreation Centers</em>
                     </li>
-                    <li>
-                        
-                        <select id="Government Buildings">
+                    <li id="Government Buildings">
+                        <select>
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -739,6 +731,49 @@ Phone: (404) 330-6225</p>
                 $(this).attr("selected", "selected")
             }
         });
+    });
+
+
+    // reorder options when selects get changed
+    var orderSet = $("#Order");
+    orderSet.find("select").each(function(i){
+        $(this).on("change", function(){
+            var optionSelected = $("option:selected", this);
+            var valueSelected = this.value;
+            var newPosition = valueSelected - 2;
+            var parent = $(this).parent();
+        
+            if(valueSelected == 1){
+                //if new value is 1, put in position 0. After position ?
+                newPosition = 1;
+                $('#Order li:eq('+newPosition+')').before(parent);
+            }
+            else if(valueSelected == 2){
+                //if value is 2, put in position 1. After position 0.
+                newPosition = 0;
+                $('#Order li:eq('+newPosition+')').after(parent);
+            }
+
+            //console.log("valueSelected: "+valueSelected+" newPosition: "+newPosition+" parent:"+parent.index());
+
+            // if value is 8, put in position 7, after 6
+
+            // if value is 10, put in position 9, after 8
+
+            // if value is 9, put in position 8 after 7
+
+            $('#Order li:eq('+newPosition+')').after(parent);
+
+            // Reorder the selects now stuff's moved
+            $("#Order").find("select").each(function(i){
+                $(this).find("option").each(function(j){
+                    if(i == j){
+                        $(this).attr("selected", "selected")
+                    }
+                });
+            });
+        })
+        orderSet = $("#Order");
     });
     
     // HTML form to Google Doc
