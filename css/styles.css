@@ -247,8 +247,9 @@ ol.steps > li.involve:before {
 .brick-image {
   width: 100%;
   min-height: 120px;
-  max-height: 240px;
+  max-height: 120px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 /* Overlays */
