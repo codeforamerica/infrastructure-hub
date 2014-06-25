@@ -740,29 +740,12 @@ Phone: (404) 330-6225</p>
         $(this).on("change", function(){
             var optionSelected = $("option:selected", this);
             var valueSelected = this.value;
-            var newPosition = valueSelected - 2;
+            var newPosition = valueSelected - 1;
             var parent = $(this).parent();
         
-            if(valueSelected == 1){
-                //if new value is 1, put in position 0. After position ?
-                newPosition = 1;
-                $('#Order li:eq('+newPosition+')').before(parent);
-            }
-            else if(valueSelected == 2){
-                //if value is 2, put in position 1. After position 0.
-                newPosition = 0;
-                $('#Order li:eq('+newPosition+')').after(parent);
-            }
-
-            //console.log("valueSelected: "+valueSelected+" newPosition: "+newPosition+" parent:"+parent.index());
-
-            // if value is 8, put in position 7, after 6
-
-            // if value is 10, put in position 9, after 8
-
-            // if value is 9, put in position 8 after 7
-
-            $('#Order li:eq('+newPosition+')').after(parent);
+            var inPosition = $('#Order li:eq('+newPosition+')');
+            $('#Order li:eq('+newPosition+')').replaceWith(parent);
+            $(parent).after(inPosition);
 
             // Reorder the selects now stuff's moved
             $("#Order").find("select").each(function(i){
