@@ -740,6 +740,15 @@ Phone: (404) 330-6225</p>
             var zip = $('#Zip').val();
             var comments = $('#Comment').val();
             
+            
+            // Order the options from 1 - 
+            $("#Order").find("select").each(function(i){
+                $(this).find("option").each(function(j){
+                    if(i == j){
+                        $(this).attr("selected", "selected")
+                    }
+                });
+            });
             // concatenate IDs into a comma-delimited string
             var ids = [];
             $('#Order').find('li').each(function() { ids.push($(this).attr('id')) });
